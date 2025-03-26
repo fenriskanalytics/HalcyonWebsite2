@@ -83,9 +83,9 @@ export type PlasmicHalcyonNavBar__OverridesType = {
   home?: Flex__<"a"> & Partial<LinkProps>;
   img?: Flex__<typeof PlasmicImg__>;
   membershipsLink?: Flex__<"a"> & Partial<LinkProps>;
+  membershipsText?: Flex__<"div">;
+  scheduleLink?: Flex__<"a"> & Partial<LinkProps>;
   scheduleText?: Flex__<"div">;
-  scheduleLink2?: Flex__<"a"> & Partial<LinkProps>;
-  scheduleText2?: Flex__<"div">;
   privateslink?: Flex__<"a"> & Partial<LinkProps>;
   loginText?: Flex__<"div">;
   aboutUsLink?: Flex__<"a"> & Partial<LinkProps>;
@@ -244,12 +244,12 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               tabIndex={2}
             >
               <div
-                data-plasmic-name={"scheduleText"}
-                data-plasmic-override={overrides.scheduleText}
+                data-plasmic-name={"membershipsText"}
+                data-plasmic-override={overrides.membershipsText}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.scheduleText
+                  sty.membershipsText
                 )}
               >
                 {"Memberships"}
@@ -257,13 +257,13 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
             </Stack__>
             <Stack__
               as={PlasmicLink__}
-              data-plasmic-name={"scheduleLink2"}
-              data-plasmic-override={overrides.scheduleLink2}
+              data-plasmic-name={"scheduleLink"}
+              data-plasmic-override={overrides.scheduleLink}
               hasGap={true}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                sty.scheduleLink2
+                sty.scheduleLink
               )}
               component={Link}
               href={`/schedule`}
@@ -271,12 +271,12 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               tabIndex={3}
             >
               <div
-                data-plasmic-name={"scheduleText2"}
-                data-plasmic-override={overrides.scheduleText2}
+                data-plasmic-name={"scheduleText"}
+                data-plasmic-override={overrides.scheduleText}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.scheduleText2
+                  sty.scheduleText
                 )}
               >
                 {"Schedule"}
@@ -396,9 +396,9 @@ const PlasmicDescendants = {
     "home",
     "img",
     "membershipsLink",
+    "membershipsText",
+    "scheduleLink",
     "scheduleText",
-    "scheduleLink2",
-    "scheduleText2",
     "privateslink",
     "loginText",
     "aboutUsLink",
@@ -408,10 +408,10 @@ const PlasmicDescendants = {
   ],
   home: ["home", "img"],
   img: ["img"],
-  membershipsLink: ["membershipsLink", "scheduleText"],
+  membershipsLink: ["membershipsLink", "membershipsText"],
+  membershipsText: ["membershipsText"],
+  scheduleLink: ["scheduleLink", "scheduleText"],
   scheduleText: ["scheduleText"],
-  scheduleLink2: ["scheduleLink2", "scheduleText2"],
-  scheduleText2: ["scheduleText2"],
   privateslink: ["privateslink", "loginText"],
   loginText: ["loginText"],
   aboutUsLink: ["aboutUsLink"],
@@ -427,9 +427,9 @@ type NodeDefaultElementType = {
   home: "a";
   img: typeof PlasmicImg__;
   membershipsLink: "a";
+  membershipsText: "div";
+  scheduleLink: "a";
   scheduleText: "div";
-  scheduleLink2: "a";
-  scheduleText2: "div";
   privateslink: "a";
   loginText: "div";
   aboutUsLink: "a";
@@ -501,9 +501,9 @@ export const PlasmicHalcyonNavBar = Object.assign(
     home: makeNodeComponent("home"),
     img: makeNodeComponent("img"),
     membershipsLink: makeNodeComponent("membershipsLink"),
+    membershipsText: makeNodeComponent("membershipsText"),
+    scheduleLink: makeNodeComponent("scheduleLink"),
     scheduleText: makeNodeComponent("scheduleText"),
-    scheduleLink2: makeNodeComponent("scheduleLink2"),
-    scheduleText2: makeNodeComponent("scheduleText2"),
     privateslink: makeNodeComponent("privateslink"),
     loginText: makeNodeComponent("loginText"),
     aboutUsLink: makeNodeComponent("aboutUsLink"),

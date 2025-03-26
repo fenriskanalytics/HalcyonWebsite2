@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { PlasmicHalcyonNavBar } from './plasmic/halcyon_website/PlasmicHalcyonNavBar';
 import type { PlasmicHalcyonNavBar__OverridesType } from './plasmic/halcyon_website/PlasmicHalcyonNavBar';
 
-type HalcyonNavBarProps = PlasmicHalcyonNavBar__OverridesType & React.ComponentProps<typeof PlasmicHalcyonNavBar>;
+type HalcyonNavBarProps = PlasmicHalcyonNavBar__OverridesType &
+  React.ComponentProps<typeof PlasmicHalcyonNavBar>;
 
 const HalcyonNavBar_ = (
   props: HalcyonNavBarProps,
@@ -26,7 +27,7 @@ const HalcyonNavBar_ = (
             href: '/account',
             onClick: (e: React.MouseEvent) => {
               e.preventDefault();
-              router.push('/account');
+              window.location.href = 'https://www.halcyonstudio.us/account';
             },
           },
         },
@@ -34,7 +35,7 @@ const HalcyonNavBar_ = (
           props: {
             onClick: (e: React.MouseEvent) => {
               e.preventDefault();
-              router.push('/memberships/');
+              window.location.href = 'https://www.halcyonstudio.us/memberships';
             },
           },
         },
@@ -42,7 +43,7 @@ const HalcyonNavBar_ = (
           props: {
             onClick: (e: React.MouseEvent) => {
               e.preventDefault();
-              router.push('/schedule');
+              window.location.href = 'https://www.halcyonstudio.us/schedule';
             },
           },
         },
