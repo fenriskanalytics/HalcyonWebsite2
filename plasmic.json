@@ -849,6 +849,32 @@
           "cssFilePath": "plasmic/halcyon_website/PlasmicAuthButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "0FEO4_hsLBLX",
+          "name": "HalcyonLink",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicHalcyonLink.tsx",
+          "importSpec": {
+            "modulePath": "HalcyonLink.tsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicHalcyonLink.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "m32vYRb_QMh8",
+          "name": "HalcyonLinkContainer",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicHalcyonLinkContainer.tsx",
+          "importSpec": {
+            "modulePath": "HalcyonLinkContainer.tsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicHalcyonLinkContainer.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
