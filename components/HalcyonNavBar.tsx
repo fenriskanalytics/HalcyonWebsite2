@@ -34,7 +34,7 @@ const HalcyonNavBar_ = (
           props: {
             onClick: (e: React.MouseEvent) => {
               e.preventDefault();
-              router.push('/memberships/buy');
+              router.push('/memberships/');
             },
           },
         },
