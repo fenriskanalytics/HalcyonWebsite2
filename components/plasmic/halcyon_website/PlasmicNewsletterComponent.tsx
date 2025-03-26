@@ -59,6 +59,22 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
+import {
+  executePlasmicDataOp,
+  usePlasmicDataOp,
+  usePlasmicInvalidate
+} from "@plasmicapp/react-web/lib/data-sources";
+
+import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
+import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
+import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
+import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -80,6 +96,13 @@ export const PlasmicNewsletterComponent__ArgProps = new Array<ArgPropType>();
 export type PlasmicNewsletterComponent__OverridesType = {
   root?: Flex__<"div">;
   h2?: Flex__<"h2">;
+  form?: Flex__<typeof FormWrapper>;
+  numberInput?: Flex__<typeof AntdInputNumber>;
+  input?: Flex__<typeof AntdInput>;
+  freeBox?: Flex__<"div">;
+  input2?: Flex__<typeof AntdInput>;
+  button?: Flex__<typeof AntdButton>;
+  text?: Flex__<"div">;
 };
 
 export interface DefaultNewsletterComponentProps {
@@ -124,6 +147,81 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  let [$queries, setDollarQueries] = React.useState<
+    Record<string, ReturnType<typeof usePlasmicDataOp>>
+  >({});
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "form.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        refName: "form",
+        onMutate: generateOnMutateForSpec("value", FormWrapper_Helpers)
+      },
+      {
+        path: "form.isSubmitting",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+
+        refName: "form",
+        onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
+      },
+      {
+        path: "numberInput.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "input.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "input2.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
+  const dataSourcesCtx = usePlasmicDataSourceContext();
+  const plasmicInvalidate = usePlasmicInvalidate();
+
+  const new$Queries: Record<string, ReturnType<typeof usePlasmicDataOp>> = {
+    newsletterQuery: usePlasmicDataOp(() => {
+      return {
+        sourceId: "wp17K6dTyNJfMVu3RB7ygH",
+        opId: "acb903ce-274f-4b96-ba2b-878c7e83a520",
+        userArgs: {},
+        cacheKey: `plasmic.$.acb903ce-274f-4b96-ba2b-878c7e83a520.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+
+    $queries = new$Queries;
+  }
+
   return (
     <Stack__
       as={"div"}
@@ -154,13 +252,264 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
       >
         {"Sign Up for Membership Promotions"}
       </h2>
+      {(() => {
+        const child$Props = {
+          className: classNames("__wab_instance", sty.form),
+          extendedOnValuesChange: async (...eventArgs: any) => {
+            generateStateOnChangePropForCodeComponents(
+              $state,
+              "value",
+              ["form", "value"],
+              FormWrapper_Helpers
+            ).apply(null, eventArgs);
+          },
+          formItems: [
+            { label: "Name", name: "name", inputType: "Text" },
+            { label: "Message", name: "message", inputType: "Text Area" }
+          ],
+          labelCol: { span: 8, horizontalOnly: true },
+          layout: "vertical",
+          mode: "advanced",
+          onFinish: async values => {
+            const $steps = {};
+
+            $steps["defaultSubmit"] = true
+              ? (() => {
+                  const actionArgs = {
+                    dataOp: {
+                      sourceId: "wp17K6dTyNJfMVu3RB7ygH",
+                      opId: "5e87df9b-4060-4f89-ada0-ac8f258958f5",
+                      userArgs: {
+                        variables: [$state.form.value]
+                      },
+                      cacheKey: null,
+                      invalidatedKeys: ["plasmic_refresh_all"],
+                      roleId: null
+                    }
+                  };
+                  return (async ({ dataOp, continueOnError }) => {
+                    try {
+                      const response = await executePlasmicDataOp(dataOp, {
+                        userAuthToken: dataSourcesCtx?.userAuthToken,
+                        user: dataSourcesCtx?.user
+                      });
+                      await plasmicInvalidate(dataOp.invalidatedKeys);
+                      return response;
+                    } catch (e) {
+                      if (!continueOnError) {
+                        throw e;
+                      }
+                      return e;
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["defaultSubmit"] != null &&
+              typeof $steps["defaultSubmit"] === "object" &&
+              typeof $steps["defaultSubmit"].then === "function"
+            ) {
+              $steps["defaultSubmit"] = await $steps["defaultSubmit"];
+            }
+          },
+          onIsSubmittingChange: async (...eventArgs: any) => {
+            generateStateOnChangePropForCodeComponents(
+              $state,
+              "isSubmitting",
+              ["form", "isSubmitting"],
+              FormWrapper_Helpers
+            ).apply(null, eventArgs);
+          },
+          ref: ref => {
+            $refs["form"] = ref;
+          },
+          submitSlot: null,
+          wrapperCol: { span: 16, horizontalOnly: true }
+        };
+        initializeCodeComponentStates(
+          $state,
+          [
+            {
+              name: "value",
+              plasmicStateName: "form.value"
+            },
+            {
+              name: "isSubmitting",
+              plasmicStateName: "form.isSubmitting"
+            }
+          ],
+          [],
+          FormWrapper_Helpers ?? {},
+          child$Props
+        );
+
+        return (
+          <FormWrapper
+            data-plasmic-name={"form"}
+            data-plasmic-override={overrides.form}
+            {...child$Props}
+          >
+            <FormItemWrapper
+              className={classNames("__wab_instance", sty.formField__tn0Ym)}
+              hidden={true}
+              initialValue={undefined}
+              label={"id"}
+              name={"id"}
+            >
+              <AntdInputNumber
+                data-plasmic-name={"numberInput"}
+                data-plasmic-override={overrides.numberInput}
+                className={classNames("__wab_instance", sty.numberInput)}
+                onChange={async (...eventArgs: any) => {
+                  generateStateOnChangeProp($state, [
+                    "numberInput",
+                    "value"
+                  ]).apply(null, eventArgs);
+                }}
+                type={"number"}
+                value={generateStateValueProp($state, ["numberInput", "value"])}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper
+              className={classNames("__wab_instance", sty.formField___87Cai)}
+              hidden={true}
+              initialValue={undefined}
+              label={"created_at"}
+              name={"created_at"}
+            >
+              {(() => {
+                const child$Props = {
+                  className: classNames("__wab_instance", sty.input),
+                  onChange: async (...eventArgs: any) => {
+                    generateStateOnChangePropForCodeComponents(
+                      $state,
+                      "value",
+                      ["input", "value"],
+                      AntdInput_Helpers
+                    ).apply(null, eventArgs);
+                  },
+                  value: generateStateValueProp($state, ["input", "value"])
+                };
+                initializeCodeComponentStates(
+                  $state,
+                  [
+                    {
+                      name: "value",
+                      plasmicStateName: "input.value"
+                    }
+                  ],
+                  [],
+                  AntdInput_Helpers ?? {},
+                  child$Props
+                );
+
+                return (
+                  <AntdInput
+                    data-plasmic-name={"input"}
+                    data-plasmic-override={overrides.input}
+                    {...child$Props}
+                  />
+                );
+              })()}
+            </FormItemWrapper>
+            <div
+              data-plasmic-name={"freeBox"}
+              data-plasmic-override={overrides.freeBox}
+              className={classNames(projectcss.all, sty.freeBox)}
+            >
+              <FormItemWrapper
+                className={classNames("__wab_instance", sty.formField__l39Yv)}
+                initialValue={undefined}
+                label={""}
+                labelAlign={"left"}
+                name={"email"}
+                noLabel={true}
+              >
+                {(() => {
+                  const child$Props = {
+                    className: classNames("__wab_instance", sty.input2),
+                    onChange: async (...eventArgs: any) => {
+                      generateStateOnChangePropForCodeComponents(
+                        $state,
+                        "value",
+                        ["input2", "value"],
+                        AntdInput_Helpers
+                      ).apply(null, eventArgs);
+                    },
+                    placeholder: "Enter Your Email",
+                    size: "large",
+                    value: generateStateValueProp($state, ["input2", "value"])
+                  };
+                  initializeCodeComponentStates(
+                    $state,
+                    [
+                      {
+                        name: "value",
+                        plasmicStateName: "input2.value"
+                      }
+                    ],
+                    [],
+                    AntdInput_Helpers ?? {},
+                    child$Props
+                  );
+
+                  return (
+                    <AntdInput
+                      data-plasmic-name={"input2"}
+                      data-plasmic-override={overrides.input2}
+                      {...child$Props}
+                    />
+                  );
+                })()}
+              </FormItemWrapper>
+              <AntdButton
+                data-plasmic-name={"button"}
+                data-plasmic-override={overrides.button}
+                className={classNames("__wab_instance", sty.button)}
+                size={"large"}
+                submitsForm={true}
+                type={"primary"}
+              >
+                <div
+                  data-plasmic-name={"text"}
+                  data-plasmic-override={overrides.text}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text
+                  )}
+                >
+                  {"Submit"}
+                </div>
+              </AntdButton>
+            </div>
+          </FormWrapper>
+        );
+      })()}
     </Stack__>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h2"],
-  h2: ["h2"]
+  root: [
+    "root",
+    "h2",
+    "form",
+    "numberInput",
+    "input",
+    "freeBox",
+    "input2",
+    "button",
+    "text"
+  ],
+  h2: ["h2"],
+  form: ["form", "numberInput", "input", "freeBox", "input2", "button", "text"],
+  numberInput: ["numberInput"],
+  input: ["input"],
+  freeBox: ["freeBox", "input2", "button", "text"],
+  input2: ["input2"],
+  button: ["button", "text"],
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -168,6 +517,13 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   h2: "h2";
+  form: typeof FormWrapper;
+  numberInput: typeof AntdInputNumber;
+  input: typeof AntdInput;
+  freeBox: "div";
+  input2: typeof AntdInput;
+  button: typeof AntdButton;
+  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -231,6 +587,13 @@ export const PlasmicNewsletterComponent = Object.assign(
   {
     // Helper components rendering sub-elements
     h2: makeNodeComponent("h2"),
+    form: makeNodeComponent("form"),
+    numberInput: makeNodeComponent("numberInput"),
+    input: makeNodeComponent("input"),
+    freeBox: makeNodeComponent("freeBox"),
+    input2: makeNodeComponent("input2"),
+    button: makeNodeComponent("button"),
+    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicNewsletterComponent
     internalVariantProps: PlasmicNewsletterComponent__VariantProps,

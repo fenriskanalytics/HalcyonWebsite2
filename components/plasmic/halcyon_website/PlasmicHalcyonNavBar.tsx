@@ -59,8 +59,6 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import AuthButton from "../../AuthButton"; // plasmic-import: tx8Yj7YTfIqS/component
-
 import { useScreenVariants as useScreenVariantsqAyk5ZgNfB } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: q_ayk5ZGNfB_/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -93,8 +91,7 @@ export type PlasmicHalcyonNavBar__OverridesType = {
   aboutUsLink?: Flex__<"a"> & Partial<LinkProps>;
   contactLink?: Flex__<"a"> & Partial<LinkProps>;
   loginLink?: Flex__<"a"> & Partial<LinkProps>;
-  link?: Flex__<"a"> & Partial<LinkProps>;
-  authButton?: Flex__<typeof AuthButton>;
+  login?: Flex__<"div">;
 };
 
 export interface DefaultHalcyonNavBarProps {
@@ -174,7 +171,9 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
             data-plasmic-override={overrides.home}
             className={classNames(projectcss.all, projectcss.a, sty.home)}
             component={Link}
+            href={`/home`}
             platform={"nextjs"}
+            tabIndex={1}
           >
             <PlasmicImg__
               data-plasmic-name={"img"}
@@ -242,6 +241,7 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               component={Link}
               href={`/memberships`}
               platform={"nextjs"}
+              tabIndex={2}
             >
               <div
                 data-plasmic-name={"membershipsText"}
@@ -268,6 +268,7 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               component={Link}
               href={`/schedule`}
               platform={"nextjs"}
+              tabIndex={3}
             >
               <div
                 data-plasmic-name={"scheduleText"}
@@ -292,7 +293,9 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
                 sty.privateslink
               )}
               component={Link}
+              href={`/privates`}
               platform={"nextjs"}
+              tabIndex={4}
             >
               <div
                 data-plasmic-name={"loginText"}
@@ -319,6 +322,7 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               component={Link}
               href={`/about-us`}
               platform={"nextjs"}
+              tabIndex={5}
             >
               <div
                 className={classNames(
@@ -343,6 +347,7 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               component={Link}
               href={`/contact`}
               platform={"nextjs"}
+              tabIndex={6}
             >
               <div
                 className={classNames(
@@ -366,19 +371,17 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               href={`/account`}
               platform={"nextjs"}
             >
-              <PlasmicLink__
-                data-plasmic-name={"link"}
-                data-plasmic-override={overrides.link}
-                className={classNames(projectcss.all, projectcss.a, sty.link)}
-                component={Link}
-                platform={"nextjs"}
+              <div
+                data-plasmic-name={"login"}
+                data-plasmic-override={overrides.login}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.login
+                )}
               >
-                <AuthButton
-                  data-plasmic-name={"authButton"}
-                  data-plasmic-override={overrides.authButton}
-                  className={classNames("__wab_instance", sty.authButton)}
-                />
-              </PlasmicLink__>
+                {"Login"}
+              </div>
             </PlasmicLink__>
           </Stack__>
         </Stack__>
@@ -401,8 +404,7 @@ const PlasmicDescendants = {
     "aboutUsLink",
     "contactLink",
     "loginLink",
-    "link",
-    "authButton"
+    "login"
   ],
   home: ["home", "img"],
   img: ["img"],
@@ -414,9 +416,8 @@ const PlasmicDescendants = {
   loginText: ["loginText"],
   aboutUsLink: ["aboutUsLink"],
   contactLink: ["contactLink"],
-  loginLink: ["loginLink", "link", "authButton"],
-  link: ["link", "authButton"],
-  authButton: ["authButton"]
+  loginLink: ["loginLink", "login"],
+  login: ["login"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -434,8 +435,7 @@ type NodeDefaultElementType = {
   aboutUsLink: "a";
   contactLink: "a";
   loginLink: "a";
-  link: "a";
-  authButton: typeof AuthButton;
+  login: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -509,8 +509,7 @@ export const PlasmicHalcyonNavBar = Object.assign(
     aboutUsLink: makeNodeComponent("aboutUsLink"),
     contactLink: makeNodeComponent("contactLink"),
     loginLink: makeNodeComponent("loginLink"),
-    link: makeNodeComponent("link"),
-    authButton: makeNodeComponent("authButton"),
+    login: makeNodeComponent("login"),
 
     // Metadata about props expected for PlasmicHalcyonNavBar
     internalVariantProps: PlasmicHalcyonNavBar__VariantProps,

@@ -448,23 +448,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
+  min-width: 0;
+  min-height: 0;
   padding: 0px;
+  border: 1px solid transparent;
 }
-.link {
-  display: flex;
-  flex-direction: row;
+.login {
   position: relative;
-  align-items: stretch;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
+  font-family: "Playfair Display", serif;
+  color: var(--token-nSMnu5meEjYV);
   min-width: 0;
-  padding: 0px;
-}
-.authButton:global(.__wab_instance):global(.__wab_instance) {
-  position: relative;
+  padding: 8px;
 }

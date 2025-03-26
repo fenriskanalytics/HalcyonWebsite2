@@ -27,11 +27,11 @@
   width: 100%;
   height: auto;
   max-width: 700px;
-  padding-top: 22px;
-  color: var(--token-Gsg_nXB6YK5A);
+  padding-top: 18px;
+  color: var(--token-DbGdjBpQ6R_X);
   text-align: center;
   font-size: 32px;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
   font-family: "Playfair Display", serif;
   font-weight: 400;
   min-width: 0;
@@ -40,4 +40,86 @@
   .h2 {
     font-size: 24px;
   }
+}
+.form:global(.__wab_instance) {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  padding: 8px;
+}
+.formField__tn0Ym:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.numberInput:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.formField___87Cai:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.input:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.freeBox {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 4px;
+  margin: 0px;
+}
+.formField__l39Yv:global(.__wab_instance) {
+  width: 100%;
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  min-width: 0;
+}
+.input2:global(.__wab_instance) {
+  width: 100%;
+  color: var(--token-MQt8PrCmhx0P);
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  position: relative;
+  align-self: center;
+  height: auto;
+  background: var(--token-Gsg_nXB6YK5A);
+  max-width: 100%;
+  object-fit: cover;
+  min-width: 0;
+  border-radius: 6px;
+  border: 0.5px solid var(--token-F8sx4GPVWjmu);
+}
+.button:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  align-self: stretch;
+  margin-right: 4px;
+  margin-left: 4px;
+  background: var(--token-7HpDdqXawcwS);
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-family: "Playfair Display", serif;
+  min-width: 0;
 }

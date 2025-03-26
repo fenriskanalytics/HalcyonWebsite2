@@ -175,6 +175,13 @@
   --mixin-xzZ2kP7RyBSs_white-space: pre-wrap;
 }
 
+.plasmic_mixins {
+  --mixin-htbMssnRBvaS_white-space: pre-wrap;
+  --plasmic-mixin-newsletter-field-preset_white-space: var(
+    --mixin-htbMssnRBvaS_white-space
+  );
+}
+
 :where(.all) {
   display: block;
   white-space: inherit;

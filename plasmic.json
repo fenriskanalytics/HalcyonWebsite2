@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -419,7 +419,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -477,7 +478,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
@@ -625,19 +627,6 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
-        },
-        {
-          "id": "tx8Yj7YTfIqS",
-          "name": "AuthButton",
-          "type": "managed",
-          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
-          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicAuthButton.tsx",
-          "importSpec": {
-            "modulePath": "AuthButton.tsx"
-          },
-          "cssFilePath": "plasmic/halcyon_website/PlasmicAuthButton.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
         },
         {
           "id": "UDe2_-rIrkzi",
@@ -805,6 +794,59 @@
             "modulePath": "SectionContactUs.tsx"
           },
           "cssFilePath": "plasmic/halcyon_website/PlasmicSectionContactUs.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "YvW5mYN77oI5",
+          "name": "Privates",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicPrivates.tsx",
+          "importSpec": {
+            "modulePath": "../pages/privates.tsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicPrivates.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/privates"
+        },
+        {
+          "id": "PZjNRg33hRNg",
+          "name": "ContainerPrivates",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicContainerPrivates.tsx",
+          "importSpec": {
+            "modulePath": "ContainerPrivates.tsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicContainerPrivates.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "v0QNEp-b2qKw",
+          "name": "FormPrivates",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicFormPrivates.tsx",
+          "importSpec": {
+            "modulePath": "FormPrivates.tsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicFormPrivates.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "tx8Yj7YTfIqS",
+          "name": "AuthButton",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicAuthButton.tsx",
+          "importSpec": {
+            "modulePath": "AuthButton.tsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicAuthButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

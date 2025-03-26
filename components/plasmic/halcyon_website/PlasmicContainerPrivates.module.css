@@ -8,42 +8,23 @@
   align-items: center;
   min-width: 0;
 }
-.heroSection {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  background: linear-gradient(
-      var(--token-IGkBEO6rpBkw),
-      var(--token-IGkBEO6rpBkw)
-    ),
-    url("/plasmic/halcyon_website/images/woman19956241920Jpg.jpg") top 50% left 50% / cover repeat;
-  min-width: 0;
-  padding: 70px 12px;
-}
 .freeBox {
   display: flex;
   position: relative;
   flex-direction: column;
   width: 100%;
   height: auto;
-  max-width: var(--token-pjNepow6wPZ7);
-  margin-bottom: 8px;
-  box-shadow: none;
+  max-width: 1440px;
   min-width: 0;
-  padding: 8px;
+  padding: 24px 35px 24px 8px;
 }
 .freeBox > :global(.__wab_flex-container) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-width: 0;
-  margin-top: calc(0px - 16px);
-  height: calc(100% + 16px);
+  margin-top: calc(0px - 11px);
+  height: calc(100% + 11px);
 }
 .freeBox > :global(.__wab_flex-container) > *,
 .freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
@@ -53,7 +34,7 @@
   > :global(.__wab_slot)
   > picture
   > img {
-  margin-top: 16px;
+  margin-top: 11px;
 }
 .h2 {
   position: relative;
@@ -61,10 +42,8 @@
   height: auto;
   max-width: 800px;
   padding-top: 0px;
-  color: var(--token-zy6xhYnWF8Y7);
+  color: var(--token-7HpDdqXawcwS);
   text-align: center;
-  margin-top: calc(4px + 16px) !important;
-  margin-bottom: 8px;
   font-family: "Playfair Display", serif;
   font-size: 50px;
   font-weight: 500;
@@ -75,24 +54,25 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  margin-bottom: 12px;
+  margin-top: calc(24px + 11px) !important;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .h2 {
-    font-size: 36px;
-    margin-top: calc(4px + 16px) !important;
+    font-size: 35px;
+    margin-top: calc(24px + 11px) !important;
   }
 }
 .text {
   position: relative;
   width: 100%;
   height: auto;
-  max-width: 750px;
-  color: var(--token-zy6xhYnWF8Y7);
+  max-width: 100%;
+  color: var(--token-MQt8PrCmhx0P);
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
   text-align: center;
-  margin-bottom: 12px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   line-height: 1.7;
@@ -101,14 +81,7 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  margin-bottom: 18px;
   min-width: 0;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .text {
-    font-size: 14px;
-    color: var(--token-nSMnu5meEjYV);
-  }
-}
-.newsletterComponent:global(.__wab_instance) {
-  position: relative;
+  padding: 8px;
 }

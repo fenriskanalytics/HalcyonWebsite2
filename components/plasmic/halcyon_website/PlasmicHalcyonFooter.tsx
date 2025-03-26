@@ -466,6 +466,7 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               component={Link}
               href={`/home`}
               platform={"nextjs"}
+              tabIndex={1}
             >
               {"Home"}
             </PlasmicLink__>
@@ -481,6 +482,7 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               component={Link}
               href={`/memberships`}
               platform={"nextjs"}
+              tabIndex={2}
             >
               {"Memberships"}
             </PlasmicLink__>
@@ -496,6 +498,7 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               component={Link}
               href={`/schedule`}
               platform={"nextjs"}
+              tabIndex={3}
             >
               {"Schedule"}
             </PlasmicLink__>
@@ -509,7 +512,9 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
                 sty.privatesPage
               )}
               component={Link}
+              href={`/privates`}
               platform={"nextjs"}
+              tabIndex={4}
             >
               {"Privates"}
             </PlasmicLink__>
@@ -525,6 +530,7 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               component={Link}
               href={`/about-us`}
               platform={"nextjs"}
+              tabIndex={5}
             >
               {"About Us"}
             </PlasmicLink__>
@@ -540,6 +546,7 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               component={Link}
               href={`/contact`}
               platform={"nextjs"}
+              tabIndex={6}
             >
               {"Contact"}
             </PlasmicLink__>
