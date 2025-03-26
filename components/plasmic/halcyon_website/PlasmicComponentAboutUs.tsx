@@ -179,10 +179,10 @@ function PlasmicComponentAboutUs__RenderFunc(props: {
               className={classNames(sty.img)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
+              displayMaxWidth={"800px"}
               displayMinHeight={"0"}
               displayMinWidth={"0"}
-              displayWidth={"auto"}
+              displayWidth={"100%"}
               loading={"lazy"}
               src={{
                 src: "/plasmic/halcyon_website/images/image12.png",
