@@ -16,7 +16,7 @@ const HalcyonFooter_ = (props: HalcyonFooterProps, ref: React.Ref<HTMLDivElement
         props: {
           onClick: (e: React.MouseEvent) => {
             e.preventDefault();
-            window.location.href = 'https://www.halcyonstudio.us/memberships/buy/';
+            window.location.href = 'https://www.halcyonstudio.us/memberships/';
           },
         },
       }}
