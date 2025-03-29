@@ -231,7 +231,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .membershipsText {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .scheduleLink {
@@ -286,7 +286,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .scheduleText {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .privateslink {
@@ -341,7 +341,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .loginText {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .aboutUsLink {
@@ -396,7 +396,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__ytTf4 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .contactLink {
@@ -451,7 +451,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text___0ITok {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .loginLink {
@@ -517,7 +517,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .login {
-    font-size: 14px;
+    font-size: 16px;
     padding: 0px;
   }
 }

@@ -148,12 +148,21 @@
   background: var(--token-Gsg_nXB6YK5A);
   outline: none;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .interestedInSelect__popup:global(.ant-select-dropdown)
+    :global(.ant-select-item-option) {
+    font-size: 12px;
+    outline: none;
+  }
+}
 .text__kJqN1 {
   background: var(--token-Gsg_nXB6YK5A);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__kJqN1 {
     font-size: 14px;
+    width: 100%;
+    min-width: 0;
   }
 }
 .numberGuests:global(.__wab_instance) {

@@ -708,6 +708,13 @@ function PlasmicPrivatesForm2__RenderFunc(props: {
                       "value"
                     ]).apply(null, eventArgs);
                   }}
+                  optionClassName={classNames({
+                    [sty["pcls_G6oWCjF_Lzui"]]: hasVariant(
+                      globalVariants,
+                      "screen",
+                      "mobileOnly"
+                    )
+                  })}
                   options={(() => {
                     const __composite = [
                       { type: "option", label: null, value: null },
