@@ -359,9 +359,11 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
                 {"Contact"}
               </div>
             </Stack__>
-            <PlasmicLink__
+            <Stack__
+              as={PlasmicLink__}
               data-plasmic-name={"loginLink"}
               data-plasmic-override={overrides.loginLink}
+              hasGap={true}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
@@ -382,7 +384,7 @@ function PlasmicHalcyonNavBar__RenderFunc(props: {
               >
                 {"Login"}
               </div>
-            </PlasmicLink__>
+            </Stack__>
           </Stack__>
         </Stack__>
       </Stack__>
