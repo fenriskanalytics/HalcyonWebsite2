@@ -6,7 +6,6 @@ import {
   DefaultHomeSectionProps
 } from "./plasmic/halcyon_website/PlasmicHomeSection";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
-import { useRouter } from "next/router";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can
@@ -27,8 +26,6 @@ function HomeSection_(
   props: HomeSectionProps,
   ref: HTMLElementRefOf<"section">
 ) {
-  const router = useRouter();
-
   return (
     <PlasmicHomeSection
       root={{ ref }}
@@ -36,7 +33,7 @@ function HomeSection_(
       membershipsButton={{
         props: {
           onClick: () => {
-            router.push("/memberships");
+            window.location.href = "https://www.halcyonstudio.us/memberships/";
           },
         },
       }}
