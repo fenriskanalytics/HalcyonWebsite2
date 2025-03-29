@@ -63,8 +63,6 @@ import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 
-import { useScreenVariants as useScreenVariantsqAyk5ZgNfB } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: q_ayk5ZGNfB_/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -91,15 +89,6 @@ export const PlasmicHalcyonFooter__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicHalcyonFooter__OverridesType = {
   footerTop?: Flex__<"div">;
-  container?: Flex__<"div">;
-  button?: Flex__<typeof AntdButton>;
-  emailAddressText?: Flex__<"div">;
-  modal?: Flex__<typeof AntdModal>;
-  embedHtml?: Flex__<typeof Embed>;
-  instagramIcon?: Flex__<"svg">;
-  pinterestIcon2?: Flex__<"svg">;
-  pinterestIcon?: Flex__<"svg">;
-  twitterIcon?: Flex__<"svg">;
   homePage?: Flex__<"a"> & Partial<LinkProps>;
   homeText?: Flex__<"div">;
   membershipsPage?: Flex__<"a"> & Partial<LinkProps>;
@@ -112,10 +101,20 @@ export type PlasmicHalcyonFooter__OverridesType = {
   homeText4?: Flex__<"div">;
   contactPage?: Flex__<"a"> & Partial<LinkProps>;
   homeText5?: Flex__<"div">;
+  button?: Flex__<typeof AntdButton>;
+  emailAddressText?: Flex__<"div">;
+  modal?: Flex__<typeof AntdModal>;
+  emailAddressText2?: Flex__<"div">;
+  modal2?: Flex__<typeof AntdModal>;
   privacyPolicyPage?: Flex__<"a"> & Partial<LinkProps>;
   termsOfServicePage?: Flex__<"a"> & Partial<LinkProps>;
   cookiesPolicyPage?: Flex__<"a"> & Partial<LinkProps>;
   h5?: Flex__<"h5">;
+  columns?: Flex__<"div">;
+  instagramIcon?: Flex__<"svg">;
+  pinterestIcon2?: Flex__<"svg">;
+  pinterestIcon?: Flex__<"svg">;
+  twitterIcon?: Flex__<"svg">;
 };
 
 export interface DefaultHalcyonFooterProps {
@@ -170,6 +169,12 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "modal2.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -179,10 +184,6 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
     $ctx,
     $queries: {},
     $refs
-  });
-
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsqAyk5ZgNfB()
   });
 
   return (
@@ -201,561 +202,605 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
         sty.footerTop
       )}
     >
-      <div
-        data-plasmic-name={"container"}
-        data-plasmic-override={overrides.container}
-        className={classNames(projectcss.all, sty.container)}
-      >
-        <div className={classNames(projectcss.all, sty.columns__uC1A)}>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.column__a0XcF)}
+      <div className={classNames(projectcss.all, sty.freeBox__sqYcI)}>
+        <div className={classNames(projectcss.all, sty.freeBox__dIcC8)}>
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__kBnWi
+            )}
+          >
+            {"Menu"}
+          </div>
+          <PlasmicLink__
+            data-plasmic-name={"homePage"}
+            data-plasmic-override={overrides.homePage}
+            className={classNames(projectcss.all, projectcss.a, sty.homePage)}
+            component={Link}
+            href={`/home`}
+            platform={"nextjs"}
+            tabIndex={1}
+          >
+            <div
+              data-plasmic-name={"homeText"}
+              data-plasmic-override={overrides.homeText}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.homeText
+              )}
+            >
+              {"Home"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            data-plasmic-name={"membershipsPage"}
+            data-plasmic-override={overrides.membershipsPage}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.membershipsPage
+            )}
+            component={Link}
+            href={`/memberships`}
+            platform={"nextjs"}
+            tabIndex={2}
+          >
+            <div
+              data-plasmic-name={"membershipsText"}
+              data-plasmic-override={overrides.membershipsText}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.membershipsText
+              )}
+            >
+              {"Memberships"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            data-plasmic-name={"schedulePage"}
+            data-plasmic-override={overrides.schedulePage}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.schedulePage
+            )}
+            component={Link}
+            href={`/schedule`}
+            platform={"nextjs"}
+            tabIndex={3}
+          >
+            <div
+              data-plasmic-name={"homeText3"}
+              data-plasmic-override={overrides.homeText3}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.homeText3
+              )}
+            >
+              {"Schedule"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            data-plasmic-name={"privatesPage"}
+            data-plasmic-override={overrides.privatesPage}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.privatesPage
+            )}
+            component={Link}
+            href={`/privates`}
+            platform={"nextjs"}
+            tabIndex={4}
+          >
+            <div
+              data-plasmic-name={"homeText6"}
+              data-plasmic-override={overrides.homeText6}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.homeText6
+              )}
+            >
+              {"Privates"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            data-plasmic-name={"aboutUsPage"}
+            data-plasmic-override={overrides.aboutUsPage}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.aboutUsPage
+            )}
+            component={Link}
+            href={`/about-us`}
+            platform={"nextjs"}
+            tabIndex={5}
+          >
+            <div
+              data-plasmic-name={"homeText4"}
+              data-plasmic-override={overrides.homeText4}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.homeText4
+              )}
+            >
+              {"About Us"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            data-plasmic-name={"contactPage"}
+            data-plasmic-override={overrides.contactPage}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.contactPage
+            )}
+            component={Link}
+            href={`/contact`}
+            platform={"nextjs"}
+            tabIndex={6}
+          >
+            <div
+              data-plasmic-name={"homeText5"}
+              data-plasmic-override={overrides.homeText5}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.homeText5
+              )}
+            >
+              {"Contact"}
+            </div>
+          </PlasmicLink__>
+        </div>
+        <div className={classNames(projectcss.all, sty.freeBox__ljnou)}>
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__yFdn
+            )}
+          >
+            {"Halcyon Studios"}
+          </div>
+          <AntdButton
+            data-plasmic-name={"button"}
+            data-plasmic-override={overrides.button}
+            className={classNames("__wab_instance", sty.button)}
+            ghost={true}
+            onClick={async () => {
+              const $steps = {};
+
+              $steps["updateModalOpen"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["modal", "open"]
+                      },
+                      operation: 4
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      const oldValue = $stateGet(objRoot, variablePath);
+                      $stateSet(objRoot, variablePath, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateModalOpen"] != null &&
+                typeof $steps["updateModalOpen"] === "object" &&
+                typeof $steps["updateModalOpen"].then === "function"
+              ) {
+                $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+              }
+            }}
           >
             <div
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__yFdn
+                sty.text__aPzDy
               )}
             >
-              {"Halcyon Studios"}
+              {"2305 W Morrison Ave\nTampa, FL 33609"}
             </div>
-            <AntdButton
-              data-plasmic-name={"button"}
-              data-plasmic-override={overrides.button}
-              className={classNames("__wab_instance", sty.button)}
-              ghost={true}
-              onClick={async () => {
-                const $steps = {};
-
-                $steps["updateModalOpen"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["modal", "open"]
-                        },
-                        operation: 4
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-
-                        const oldValue = $stateGet(objRoot, variablePath);
-                        $stateSet(objRoot, variablePath, !oldValue);
-                        return !oldValue;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateModalOpen"] != null &&
-                  typeof $steps["updateModalOpen"] === "object" &&
-                  typeof $steps["updateModalOpen"].then === "function"
-                ) {
-                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
-                }
+          </AntdButton>
+          <div className={classNames(projectcss.all, sty.freeBox__mJ5)}>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__h5GKs
+              )}
+            >
+              {"Phone"}
+            </div>
+            <div
+              data-plasmic-name={"emailAddressText"}
+              data-plasmic-override={overrides.emailAddressText}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.emailAddressText
+              )}
+            >
+              {"(813) 284-7281"}
+            </div>
+            <AntdModal
+              data-plasmic-name={"modal"}
+              data-plasmic-override={overrides.modal}
+              className={classNames("__wab_instance", sty.modal)}
+              defaultStylesClassName={classNames(
+                projectcss.root_reset,
+                projectcss.plasmic_default_styles,
+                projectcss.plasmic_mixins,
+                projectcss.plasmic_tokens,
+                plasmic_antd_5_hostless_css.plasmic_tokens
+              )}
+              modalScopeClassName={sty["modal__modal"]}
+              onOpenChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, ["modal", "open"]).apply(
+                  null,
+                  eventArgs
+                );
               }}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__aPzDy
-                )}
-              >
-                {"2305 W Morrison Ave\nTampa, FL 33609"}
-              </div>
-            </AntdButton>
-            <div className={classNames(projectcss.all, sty.freeBox__mJ5)}>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__h5GKs
-                )}
-              >
-                {"EMAIL"}
-              </div>
-              <div
-                data-plasmic-name={"emailAddressText"}
-                data-plasmic-override={overrides.emailAddressText}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.emailAddressText
-                )}
-              >
-                {"Info@HalcyonStudio.us"}
-              </div>
-              <AntdModal
-                data-plasmic-name={"modal"}
-                data-plasmic-override={overrides.modal}
-                className={classNames("__wab_instance", sty.modal)}
-                defaultStylesClassName={classNames(
-                  projectcss.root_reset,
-                  projectcss.plasmic_default_styles,
-                  projectcss.plasmic_mixins,
-                  projectcss.plasmic_tokens,
-                  plasmic_antd_5_hostless_css.plasmic_tokens
-                )}
-                modalScopeClassName={sty["modal__modal"]}
-                onOpenChange={async (...eventArgs: any) => {
-                  generateStateOnChangeProp($state, ["modal", "open"]).apply(
-                    null,
-                    eventArgs
-                  );
-                }}
-                open={generateStateValueProp($state, ["modal", "open"])}
-                title={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__xmtFn
-                    )}
-                  >
-                    {"Halcyon Studios"}
-                  </div>
-                }
-                trigger={null}
-                width={"650"}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__qjxGl)}>
-                  <Embed
-                    data-plasmic-name={"embedHtml"}
-                    data-plasmic-override={overrides.embedHtml}
-                    className={classNames("__wab_instance", sty.embedHtml)}
-                    code={
-                      '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.9592825997906!2d-82.48591732531897!3d27.933893476053484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c30f3960f8cf%3A0x2bebf5a2a4db0690!2sHalcyon%20Studio!5e0!3m2!1sen!2sus!4v1713144134165!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
-                    }
-                  />
+              open={generateStateValueProp($state, ["modal", "open"])}
+              title={
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__xmtFn
+                  )}
+                >
+                  {"Halcyon Studios"}
                 </div>
-              </AntdModal>
-            </div>
+              }
+              trigger={null}
+              width={"650"}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__qjxGl)}>
+                <Embed
+                  className={classNames("__wab_instance", sty.embedHtml__dnMs)}
+                  code={
+                    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.9592825997906!2d-82.48591732531897!3d27.933893476053484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c30f3960f8cf%3A0x2bebf5a2a4db0690!2sHalcyon%20Studio!5e0!3m2!1sen!2sus!4v1713144134165!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+                  }
+                />
+              </div>
+            </AntdModal>
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox___44Ia)}>
             <div
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__jFkXy
+                sty.text__cjD8G
               )}
             >
-              {"FOLLOW US"}
+              {"Email"}
             </div>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__igy4E)}
-            >
-              <Instagram1SvgrepoComSvgIcon
-                data-plasmic-name={"instagramIcon"}
-                data-plasmic-override={overrides.instagramIcon}
-                className={classNames(projectcss.all, sty.instagramIcon)}
-                onClick={async event => {
-                  const $steps = {};
-
-                  $steps["goToHttpsWwwInstagramComHalcyonstudiosus"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          destination:
-                            "https://www.instagram.com/halcyonstudiosus/"
-                        };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToHttpsWwwInstagramComHalcyonstudiosus"] !=
-                      null &&
-                    typeof $steps[
-                      "goToHttpsWwwInstagramComHalcyonstudiosus"
-                    ] === "object" &&
-                    typeof $steps["goToHttpsWwwInstagramComHalcyonstudiosus"]
-                      .then === "function"
-                  ) {
-                    $steps["goToHttpsWwwInstagramComHalcyonstudiosus"] =
-                      await $steps["goToHttpsWwwInstagramComHalcyonstudiosus"];
-                  }
-                }}
-                role={"img"}
-              />
-
-              <TiktokLogoLogoSvgrepoComSvgIcon
-                data-plasmic-name={"pinterestIcon2"}
-                data-plasmic-override={overrides.pinterestIcon2}
-                className={classNames(projectcss.all, sty.pinterestIcon2)}
-                role={"img"}
-              />
-
-              <PinterestSvgrepoComSvg2Icon
-                data-plasmic-name={"pinterestIcon"}
-                data-plasmic-override={overrides.pinterestIcon}
-                className={classNames(projectcss.all, sty.pinterestIcon)}
-                role={"img"}
-              />
-
-              <LogoSvgIcon
-                data-plasmic-name={"twitterIcon"}
-                data-plasmic-override={overrides.twitterIcon}
-                className={classNames(projectcss.all, sty.twitterIcon)}
-                onClick={async event => {
-                  const $steps = {};
-
-                  $steps["goToPage"] = true
-                    ? (() => {
-                        const actionArgs = {};
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToPage"] != null &&
-                    typeof $steps["goToPage"] === "object" &&
-                    typeof $steps["goToPage"].then === "function"
-                  ) {
-                    $steps["goToPage"] = await $steps["goToPage"];
-                  }
-                }}
-                role={"img"}
-              />
-            </Stack__>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.column__qxxG4)}
-          >
             <div
+              data-plasmic-name={"emailAddressText2"}
+              data-plasmic-override={overrides.emailAddressText2}
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__kBnWi
+                sty.emailAddressText2
               )}
             >
-              {"Menu"}
+              {"Info@HalcyonStudio.us"}
             </div>
+            <AntdModal
+              data-plasmic-name={"modal2"}
+              data-plasmic-override={overrides.modal2}
+              className={classNames("__wab_instance", sty.modal2)}
+              defaultStylesClassName={classNames(
+                projectcss.root_reset,
+                projectcss.plasmic_default_styles,
+                projectcss.plasmic_mixins,
+                projectcss.plasmic_tokens,
+                plasmic_antd_5_hostless_css.plasmic_tokens
+              )}
+              modalScopeClassName={sty["modal2__modal"]}
+              onOpenChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, ["modal2", "open"]).apply(
+                  null,
+                  eventArgs
+                );
+              }}
+              open={generateStateValueProp($state, ["modal2", "open"])}
+              title={
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__cLEb
+                  )}
+                >
+                  {"Halcyon Studios"}
+                </div>
+              }
+              trigger={null}
+              width={"650"}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__dzKoJ)}>
+                <Embed
+                  className={classNames("__wab_instance", sty.embedHtml__eOvne)}
+                  code={
+                    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.9592825997906!2d-82.48591732531897!3d27.933893476053484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c30f3960f8cf%3A0x2bebf5a2a4db0690!2sHalcyon%20Studio!5e0!3m2!1sen!2sus!4v1713144134165!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+                  }
+                />
+              </div>
+            </AntdModal>
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__xdPun)}>
             <PlasmicLink__
-              data-plasmic-name={"homePage"}
-              data-plasmic-override={overrides.homePage}
-              className={classNames(projectcss.all, projectcss.a, sty.homePage)}
+              data-plasmic-name={"privacyPolicyPage"}
+              data-plasmic-override={overrides.privacyPolicyPage}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.privacyPolicyPage
+              )}
               component={Link}
-              href={`/home`}
+              href={`/privacy-policy`}
               platform={"nextjs"}
               tabIndex={1}
+              target={"_blank"}
             >
-              <div
-                data-plasmic-name={"homeText"}
-                data-plasmic-override={overrides.homeText}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.homeText
-                )}
-              >
-                {"Home"}
-              </div>
+              {"Privacy Policy "}
             </PlasmicLink__>
             <PlasmicLink__
-              data-plasmic-name={"membershipsPage"}
-              data-plasmic-override={overrides.membershipsPage}
+              data-plasmic-name={"termsOfServicePage"}
+              data-plasmic-override={overrides.termsOfServicePage}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                sty.membershipsPage
+                projectcss.__wab_text,
+                sty.termsOfServicePage
               )}
               component={Link}
-              href={`/memberships`}
+              href={`/terms-of-service`}
               platform={"nextjs"}
               tabIndex={2}
+              target={"_blank"}
             >
-              <div
-                data-plasmic-name={"membershipsText"}
-                data-plasmic-override={overrides.membershipsText}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.membershipsText
-                )}
-              >
-                {"Memberships"}
-              </div>
+              {"Terms of Service "}
             </PlasmicLink__>
             <PlasmicLink__
-              data-plasmic-name={"schedulePage"}
-              data-plasmic-override={overrides.schedulePage}
+              data-plasmic-name={"cookiesPolicyPage"}
+              data-plasmic-override={overrides.cookiesPolicyPage}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                sty.schedulePage
+                projectcss.__wab_text,
+                sty.cookiesPolicyPage
               )}
               component={Link}
-              href={`/schedule`}
+              href={`/cookies-policy`}
               platform={"nextjs"}
               tabIndex={3}
+              target={"_blank"}
             >
-              <div
-                data-plasmic-name={"homeText3"}
-                data-plasmic-override={overrides.homeText3}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.homeText3
-                )}
-              >
-                {"Schedule"}
-              </div>
+              {"Cookies Policy"}
             </PlasmicLink__>
-            <PlasmicLink__
-              data-plasmic-name={"privatesPage"}
-              data-plasmic-override={overrides.privatesPage}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.privatesPage
-              )}
-              component={Link}
-              href={`/privates`}
-              platform={"nextjs"}
-              tabIndex={4}
-            >
-              <div
-                data-plasmic-name={"homeText6"}
-                data-plasmic-override={overrides.homeText6}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.homeText6
-                )}
-              >
-                {"Privates"}
-              </div>
-            </PlasmicLink__>
-            <PlasmicLink__
-              data-plasmic-name={"aboutUsPage"}
-              data-plasmic-override={overrides.aboutUsPage}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.aboutUsPage
-              )}
-              component={Link}
-              href={`/about-us`}
-              platform={"nextjs"}
-              tabIndex={5}
-            >
-              <div
-                data-plasmic-name={"homeText4"}
-                data-plasmic-override={overrides.homeText4}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.homeText4
-                )}
-              >
-                {"About Us"}
-              </div>
-            </PlasmicLink__>
-            <PlasmicLink__
-              data-plasmic-name={"contactPage"}
-              data-plasmic-override={overrides.contactPage}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.contactPage
-              )}
-              component={Link}
-              href={`/contact`}
-              platform={"nextjs"}
-              tabIndex={6}
-            >
-              <div
-                data-plasmic-name={"homeText5"}
-                data-plasmic-override={overrides.homeText5}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.homeText5
-                )}
-              >
-                {"Contact"}
-              </div>
-            </PlasmicLink__>
-            <div className={classNames(projectcss.all, sty.freeBox__xdPun)}>
-              <PlasmicLink__
-                data-plasmic-name={"privacyPolicyPage"}
-                data-plasmic-override={overrides.privacyPolicyPage}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  projectcss.__wab_text,
-                  sty.privacyPolicyPage
-                )}
-                component={Link}
-                href={`/privacy-policy`}
-                platform={"nextjs"}
-                tabIndex={1}
-                target={"_blank"}
-              >
-                {"Privacy Policy "}
-              </PlasmicLink__>
-              <PlasmicLink__
-                data-plasmic-name={"termsOfServicePage"}
-                data-plasmic-override={overrides.termsOfServicePage}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  projectcss.__wab_text,
-                  sty.termsOfServicePage
-                )}
-                component={Link}
-                href={`/terms-of-service`}
-                platform={"nextjs"}
-                tabIndex={2}
-                target={"_blank"}
-              >
-                {"Terms of Service "}
-              </PlasmicLink__>
-              <PlasmicLink__
-                data-plasmic-name={"cookiesPolicyPage"}
-                data-plasmic-override={overrides.cookiesPolicyPage}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  projectcss.__wab_text,
-                  sty.cookiesPolicyPage
-                )}
-                component={Link}
-                href={`/cookies-policy`}
-                platform={"nextjs"}
-                tabIndex={3}
-                target={"_blank"}
-              >
-                {"Cookies Policy"}
-              </PlasmicLink__>
+          </div>
+        </div>
+        <div className={classNames(projectcss.all, sty.freeBox__tEcI)}>
+          <h5
+            data-plasmic-name={"h5"}
+            data-plasmic-override={overrides.h5}
+            className={classNames(
+              projectcss.all,
+              projectcss.h5,
+              projectcss.__wab_text,
+              sty.h5
+            )}
+          >
+            {"Gallery"}
+          </h5>
+          <div
+            data-plasmic-name={"columns"}
+            data-plasmic-override={overrides.columns}
+            className={classNames(projectcss.all, sty.columns)}
+          >
+            <div className={classNames(projectcss.all, sty.column__mp95M)}>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__olwDc)}
+                displayHeight={"80px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/halcyon_website/images/halcyonAngleViewJpg.jpg",
+                  fullWidth: 3840,
+                  fullHeight: 2160,
+                  aspectRatio: undefined
+                }}
+              />
             </div>
-          </Stack__>
-          <div className={classNames(projectcss.all, sty.column__oh6Bc)}>
-            <h5
-              data-plasmic-name={"h5"}
-              data-plasmic-override={overrides.h5}
-              className={classNames(
-                projectcss.all,
-                projectcss.h5,
-                projectcss.__wab_text,
-                sty.h5
-              )}
-            >
-              {"Gallery"}
-            </h5>
-            <div className={classNames(projectcss.all, sty.columns__rpJzJ)}>
-              <div className={classNames(projectcss.all, sty.column__mmaqc)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__olwDc)}
-                  displayHeight={"80px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/halcyon_website/images/halcyonAngleViewJpg.jpg",
-                    fullWidth: 3840,
-                    fullHeight: 2160,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__qvKh)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__yQagK)}
-                  displayHeight={"80px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/halcyon_website/images/halcyonZoomedAngleViewJpg.jpg",
-                    fullWidth: 3840,
-                    fullHeight: 2160,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
+            <div className={classNames(projectcss.all, sty.column__ptc4R)}>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__yQagK)}
+                displayHeight={"80px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/halcyon_website/images/halcyonZoomedAngleViewJpg.jpg",
+                  fullWidth: 3840,
+                  fullHeight: 2160,
+                  aspectRatio: undefined
+                }}
+              />
             </div>
-            <div className={classNames(projectcss.all, sty.columns___8JNkK)}>
-              <div className={classNames(projectcss.all, sty.column__ohOVz)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__qlnwt)}
-                  displayHeight={"80px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/halcyon_website/images/_28Jpg.jpg",
-                    fullWidth: 3840,
-                    fullHeight: 2160,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__w7Dk)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__vHrY6)}
-                  displayHeight={"80px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/halcyon_website/images/_24Jpg.jpg",
-                    fullWidth: 3840,
-                    fullHeight: 2160,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
+            <div className={classNames(projectcss.all, sty.column__i41Kd)}>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__qlnwt)}
+                displayHeight={"80px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/halcyon_website/images/_28Jpg.jpg",
+                  fullWidth: 3840,
+                  fullHeight: 2160,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.column__nVKca)}>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__vHrY6)}
+                displayHeight={"80px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/halcyon_website/images/_24Jpg.jpg",
+                  fullWidth: 3840,
+                  fullHeight: 2160,
+                  aspectRatio: undefined
+                }}
+              />
             </div>
           </div>
         </div>
+      </div>
+      <div className={classNames(projectcss.all, sty.freeBox___6Afiv)}>
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__jFkXy
+          )}
+        >
+          {"FOLLOW US"}
+        </div>
+        <Stack__
+          as={"div"}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox__igy4E)}
+        >
+          <Instagram1SvgrepoComSvgIcon
+            data-plasmic-name={"instagramIcon"}
+            data-plasmic-override={overrides.instagramIcon}
+            className={classNames(projectcss.all, sty.instagramIcon)}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["goToHttpsWwwInstagramComHalcyonstudiosus"] = true
+                ? (() => {
+                    const actionArgs = {
+                      destination: "https://www.instagram.com/halcyonstudiosus/"
+                    };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToHttpsWwwInstagramComHalcyonstudiosus"] != null &&
+                typeof $steps["goToHttpsWwwInstagramComHalcyonstudiosus"] ===
+                  "object" &&
+                typeof $steps["goToHttpsWwwInstagramComHalcyonstudiosus"]
+                  .then === "function"
+              ) {
+                $steps["goToHttpsWwwInstagramComHalcyonstudiosus"] =
+                  await $steps["goToHttpsWwwInstagramComHalcyonstudiosus"];
+              }
+            }}
+            role={"img"}
+          />
+
+          <TiktokLogoLogoSvgrepoComSvgIcon
+            data-plasmic-name={"pinterestIcon2"}
+            data-plasmic-override={overrides.pinterestIcon2}
+            className={classNames(projectcss.all, sty.pinterestIcon2)}
+            role={"img"}
+          />
+
+          <PinterestSvgrepoComSvg2Icon
+            data-plasmic-name={"pinterestIcon"}
+            data-plasmic-override={overrides.pinterestIcon}
+            className={classNames(projectcss.all, sty.pinterestIcon)}
+            role={"img"}
+          />
+
+          <LogoSvgIcon
+            data-plasmic-name={"twitterIcon"}
+            data-plasmic-override={overrides.twitterIcon}
+            className={classNames(projectcss.all, sty.twitterIcon)}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["goToPage"] = true
+                ? (() => {
+                    const actionArgs = {};
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
+              ) {
+                $steps["goToPage"] = await $steps["goToPage"];
+              }
+            }}
+            role={"img"}
+          />
+        </Stack__>
       </div>
     </div>
   ) as React.ReactElement | null;
@@ -764,15 +809,6 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
 const PlasmicDescendants = {
   footerTop: [
     "footerTop",
-    "container",
-    "button",
-    "emailAddressText",
-    "modal",
-    "embedHtml",
-    "instagramIcon",
-    "pinterestIcon2",
-    "pinterestIcon",
-    "twitterIcon",
     "homePage",
     "homeText",
     "membershipsPage",
@@ -785,46 +821,21 @@ const PlasmicDescendants = {
     "homeText4",
     "contactPage",
     "homeText5",
-    "privacyPolicyPage",
-    "termsOfServicePage",
-    "cookiesPolicyPage",
-    "h5"
-  ],
-  container: [
-    "container",
     "button",
     "emailAddressText",
     "modal",
-    "embedHtml",
-    "instagramIcon",
-    "pinterestIcon2",
-    "pinterestIcon",
-    "twitterIcon",
-    "homePage",
-    "homeText",
-    "membershipsPage",
-    "membershipsText",
-    "schedulePage",
-    "homeText3",
-    "privatesPage",
-    "homeText6",
-    "aboutUsPage",
-    "homeText4",
-    "contactPage",
-    "homeText5",
+    "emailAddressText2",
+    "modal2",
     "privacyPolicyPage",
     "termsOfServicePage",
     "cookiesPolicyPage",
-    "h5"
+    "h5",
+    "columns",
+    "instagramIcon",
+    "pinterestIcon2",
+    "pinterestIcon",
+    "twitterIcon"
   ],
-  button: ["button"],
-  emailAddressText: ["emailAddressText"],
-  modal: ["modal", "embedHtml"],
-  embedHtml: ["embedHtml"],
-  instagramIcon: ["instagramIcon"],
-  pinterestIcon2: ["pinterestIcon2"],
-  pinterestIcon: ["pinterestIcon"],
-  twitterIcon: ["twitterIcon"],
   homePage: ["homePage", "homeText"],
   homeText: ["homeText"],
   membershipsPage: ["membershipsPage", "membershipsText"],
@@ -837,25 +848,26 @@ const PlasmicDescendants = {
   homeText4: ["homeText4"],
   contactPage: ["contactPage", "homeText5"],
   homeText5: ["homeText5"],
+  button: ["button"],
+  emailAddressText: ["emailAddressText"],
+  modal: ["modal"],
+  emailAddressText2: ["emailAddressText2"],
+  modal2: ["modal2"],
   privacyPolicyPage: ["privacyPolicyPage"],
   termsOfServicePage: ["termsOfServicePage"],
   cookiesPolicyPage: ["cookiesPolicyPage"],
-  h5: ["h5"]
+  h5: ["h5"],
+  columns: ["columns"],
+  instagramIcon: ["instagramIcon"],
+  pinterestIcon2: ["pinterestIcon2"],
+  pinterestIcon: ["pinterestIcon"],
+  twitterIcon: ["twitterIcon"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   footerTop: "div";
-  container: "div";
-  button: typeof AntdButton;
-  emailAddressText: "div";
-  modal: typeof AntdModal;
-  embedHtml: typeof Embed;
-  instagramIcon: "svg";
-  pinterestIcon2: "svg";
-  pinterestIcon: "svg";
-  twitterIcon: "svg";
   homePage: "a";
   homeText: "div";
   membershipsPage: "a";
@@ -868,10 +880,20 @@ type NodeDefaultElementType = {
   homeText4: "div";
   contactPage: "a";
   homeText5: "div";
+  button: typeof AntdButton;
+  emailAddressText: "div";
+  modal: typeof AntdModal;
+  emailAddressText2: "div";
+  modal2: typeof AntdModal;
   privacyPolicyPage: "a";
   termsOfServicePage: "a";
   cookiesPolicyPage: "a";
   h5: "h5";
+  columns: "div";
+  instagramIcon: "svg";
+  pinterestIcon2: "svg";
+  pinterestIcon: "svg";
+  twitterIcon: "svg";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -934,15 +956,6 @@ export const PlasmicHalcyonFooter = Object.assign(
   makeNodeComponent("footerTop"),
   {
     // Helper components rendering sub-elements
-    container: makeNodeComponent("container"),
-    button: makeNodeComponent("button"),
-    emailAddressText: makeNodeComponent("emailAddressText"),
-    modal: makeNodeComponent("modal"),
-    embedHtml: makeNodeComponent("embedHtml"),
-    instagramIcon: makeNodeComponent("instagramIcon"),
-    pinterestIcon2: makeNodeComponent("pinterestIcon2"),
-    pinterestIcon: makeNodeComponent("pinterestIcon"),
-    twitterIcon: makeNodeComponent("twitterIcon"),
     homePage: makeNodeComponent("homePage"),
     homeText: makeNodeComponent("homeText"),
     membershipsPage: makeNodeComponent("membershipsPage"),
@@ -955,10 +968,20 @@ export const PlasmicHalcyonFooter = Object.assign(
     homeText4: makeNodeComponent("homeText4"),
     contactPage: makeNodeComponent("contactPage"),
     homeText5: makeNodeComponent("homeText5"),
+    button: makeNodeComponent("button"),
+    emailAddressText: makeNodeComponent("emailAddressText"),
+    modal: makeNodeComponent("modal"),
+    emailAddressText2: makeNodeComponent("emailAddressText2"),
+    modal2: makeNodeComponent("modal2"),
     privacyPolicyPage: makeNodeComponent("privacyPolicyPage"),
     termsOfServicePage: makeNodeComponent("termsOfServicePage"),
     cookiesPolicyPage: makeNodeComponent("cookiesPolicyPage"),
     h5: makeNodeComponent("h5"),
+    columns: makeNodeComponent("columns"),
+    instagramIcon: makeNodeComponent("instagramIcon"),
+    pinterestIcon2: makeNodeComponent("pinterestIcon2"),
+    pinterestIcon: makeNodeComponent("pinterestIcon"),
+    twitterIcon: makeNodeComponent("twitterIcon"),
 
     // Metadata about props expected for PlasmicHalcyonFooter
     internalVariantProps: PlasmicHalcyonFooter__VariantProps,
