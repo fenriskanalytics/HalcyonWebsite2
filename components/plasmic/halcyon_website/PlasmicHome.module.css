@@ -42,6 +42,7 @@
   flex-grow: 1;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
+  display: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .modal:global(.__wab_instance):global(.__wab_instance) {
