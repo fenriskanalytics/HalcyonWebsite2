@@ -206,11 +206,11 @@
   background: #ffffff00;
 }
 .startIconContainer {
-  display: flex;
   position: relative;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  display: none;
 }
 .startIconContainershowStartIcon {
   display: flex;
@@ -307,9 +307,6 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
-}
-.endIconContainershowEndIcon {
-  display: flex;
 }
 .slotTargetEndIcon {
   color: #ededec;
