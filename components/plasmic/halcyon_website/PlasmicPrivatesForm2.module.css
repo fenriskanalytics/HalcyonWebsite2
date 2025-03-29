@@ -125,6 +125,9 @@
   .interestedIn:global(.__wab_instance) {
     padding-right: 8px;
     padding-left: 8px;
+    max-width: 194px;
+    width: 100%;
+    min-width: 0;
   }
 }
 .interestedInText {
@@ -148,12 +151,24 @@
 .text__kJqN1 {
   background: var(--token-Gsg_nXB6YK5A);
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__kJqN1 {
+    font-size: 14px;
+  }
+}
 .numberGuests:global(.__wab_instance) {
   width: 100%;
   padding-right: 8px;
   padding-left: 8px;
   min-width: 0;
   margin: 0px 0px 0px 3px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .numberGuests:global(.__wab_instance) {
+    max-width: 159px;
+    width: 100%;
+    min-width: 0;
+  }
 }
 .numberGuestsText {
   color: var(--token-7HpDdqXawcwS);
@@ -173,7 +188,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .guestsNumberInput:global(.__wab_instance) {
-    width: 151px;
+    width: 140px;
   }
 }
 .comments:global(.__wab_instance) {
