@@ -83,6 +83,7 @@ export const PlasmicHomeSection__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomeSection__OverridesType = {
   root?: Flex__<"section">;
   membershipsButton?: Flex__<typeof Button>;
+  svg?: Flex__<"svg">;
   link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
@@ -185,6 +186,14 @@ function PlasmicHomeSection__RenderFunc(props: {
               data-plasmic-override={overrides.membershipsButton}
               className={classNames("__wab_instance", sty.membershipsButton)}
               color={"green"}
+              endIcon={
+                <CheckSvgIcon
+                  data-plasmic-name={"svg"}
+                  data-plasmic-override={overrides.svg}
+                  className={classNames(projectcss.all, sty.svg)}
+                  role={"img"}
+                />
+              }
               size={"minimal"}
               submitsForm={false}
             >
@@ -215,8 +224,9 @@ function PlasmicHomeSection__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "membershipsButton", "link"],
-  membershipsButton: ["membershipsButton", "link"],
+  root: ["root", "membershipsButton", "svg", "link"],
+  membershipsButton: ["membershipsButton", "svg", "link"],
+  svg: ["svg"],
   link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -225,6 +235,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "section";
   membershipsButton: typeof Button;
+  svg: "svg";
   link: "a";
 };
 
@@ -289,6 +300,7 @@ export const PlasmicHomeSection = Object.assign(
   {
     // Helper components rendering sub-elements
     membershipsButton: makeNodeComponent("membershipsButton"),
+    svg: makeNodeComponent("svg"),
     link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicHomeSection
