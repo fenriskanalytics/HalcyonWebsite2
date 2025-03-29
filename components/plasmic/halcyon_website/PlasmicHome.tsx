@@ -61,6 +61,9 @@ import {
 
 import HalcyonNavBar from "../../HalcyonNavBar"; // plasmic-import: UDe2_-rIrkzi/component
 import HomeSection from "../../HomeSection"; // plasmic-import: LXjBXx0xs4DF/component
+import Modal from "../../Modal"; // plasmic-import: keAsdwDrHMRN/component
+import Button2 from "../../Button2"; // plasmic-import: EzXt4dLDUD1c/component
+import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
 import HeroHomePage from "../../HeroHomePage"; // plasmic-import: FTD1V6ByjhQi/component
 import HalcyonFooter from "../../HalcyonFooter"; // plasmic-import: WgtcOX7lLlZ3/component
 import HalcyonFooterBottom from "../../HalcyonFooterBottom"; // plasmic-import: DyM3o4afMIzM/component
@@ -70,6 +73,9 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 4ek7yevYSmZU9MaEHzjjyJ/projectcss
 import sty from "./PlasmicHome.module.css"; // plasmic-import: CiVwiuPh5oJp/css
+
+import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: e4xKVw9ZM0Hl/icon
+import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: Z7JLlwxnkhBV/icon
 
 createPlasmicElementProxy;
 
@@ -86,6 +92,11 @@ export type PlasmicHome__OverridesType = {
   homePage?: Flex__<"div">;
   halcyonNavBar?: Flex__<typeof HalcyonNavBar>;
   homeSection?: Flex__<typeof HomeSection>;
+  modal?: Flex__<typeof Modal>;
+  h3?: Flex__<"h3">;
+  iframe?: Flex__<typeof Iframe>;
+  button2?: Flex__<typeof Button2>;
+  text?: Flex__<"div">;
   heroHomePage?: Flex__<typeof HeroHomePage>;
   halcyonFooter?: Flex__<typeof HalcyonFooter>;
   halcyonFooterBottom?: Flex__<typeof HalcyonFooterBottom>;
@@ -130,6 +141,24 @@ function PlasmicHome__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "modal.isOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
 
   return (
     <React.Fragment>
@@ -182,6 +211,120 @@ function PlasmicHome__RenderFunc(props: {
             className={classNames("__wab_instance", sty.homeSection)}
           />
 
+          <Modal
+            data-plasmic-name={"modal"}
+            data-plasmic-override={overrides.modal}
+            className={classNames("__wab_instance", sty.modal)}
+            content={
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox___00V1K)}
+              >
+                <Iframe
+                  data-plasmic-name={"iframe"}
+                  data-plasmic-override={overrides.iframe}
+                  className={classNames("__wab_instance", sty.iframe)}
+                  preview={true}
+                  src={
+                    "https://halcyonstudio.marianaiframes.com/iframe/buy/48717"
+                  }
+                />
+              </Stack__>
+            }
+            footer={
+              <div className={classNames(projectcss.all, sty.freeBox__aS4Ml)}>
+                <Button2
+                  data-plasmic-name={"button2"}
+                  data-plasmic-override={overrides.button2}
+                  color={"muted"}
+                  label={
+                    <div
+                      data-plasmic-name={"text"}
+                      data-plasmic-override={overrides.text}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text
+                      )}
+                    >
+                      {"Close"}
+                    </div>
+                  }
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["updateModalIsOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["modal", "isOpen"]
+                            },
+                            operation: 4
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            const oldValue = $stateGet(objRoot, variablePath);
+                            $stateSet(objRoot, variablePath, !oldValue);
+                            return !oldValue;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateModalIsOpen"] != null &&
+                      typeof $steps["updateModalIsOpen"] === "object" &&
+                      typeof $steps["updateModalIsOpen"].then === "function"
+                    ) {
+                      $steps["updateModalIsOpen"] = await $steps[
+                        "updateModalIsOpen"
+                      ];
+                    }
+                  }}
+                  type={"soft"}
+                />
+              </div>
+            }
+            heading={
+              <h3
+                data-plasmic-name={"h3"}
+                data-plasmic-override={overrides.h3}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h3,
+                  projectcss.__wab_text,
+                  sty.h3
+                )}
+              >
+                {"Halcyon Studios Memberships"}
+              </h3>
+            }
+            isOpen={generateStateValueProp($state, ["modal", "isOpen"])}
+            onOpenChange={async (...eventArgs: any) => {
+              generateStateOnChangeProp($state, ["modal", "isOpen"]).apply(
+                null,
+                eventArgs
+              );
+
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+          />
+
           <HeroHomePage
             data-plasmic-name={"heroHomePage"}
             data-plasmic-override={overrides.heroHomePage}
@@ -210,12 +353,22 @@ const PlasmicDescendants = {
     "homePage",
     "halcyonNavBar",
     "homeSection",
+    "modal",
+    "h3",
+    "iframe",
+    "button2",
+    "text",
     "heroHomePage",
     "halcyonFooter",
     "halcyonFooterBottom"
   ],
   halcyonNavBar: ["halcyonNavBar"],
   homeSection: ["homeSection"],
+  modal: ["modal", "h3", "iframe", "button2", "text"],
+  h3: ["h3"],
+  iframe: ["iframe"],
+  button2: ["button2", "text"],
+  text: ["text"],
   heroHomePage: ["heroHomePage"],
   halcyonFooter: ["halcyonFooter"],
   halcyonFooterBottom: ["halcyonFooterBottom"]
@@ -227,6 +380,11 @@ type NodeDefaultElementType = {
   homePage: "div";
   halcyonNavBar: typeof HalcyonNavBar;
   homeSection: typeof HomeSection;
+  modal: typeof Modal;
+  h3: "h3";
+  iframe: typeof Iframe;
+  button2: typeof Button2;
+  text: "div";
   heroHomePage: typeof HeroHomePage;
   halcyonFooter: typeof HalcyonFooter;
   halcyonFooterBottom: typeof HalcyonFooterBottom;
@@ -294,6 +452,11 @@ export const PlasmicHome = Object.assign(
     // Helper components rendering sub-elements
     halcyonNavBar: makeNodeComponent("halcyonNavBar"),
     homeSection: makeNodeComponent("homeSection"),
+    modal: makeNodeComponent("modal"),
+    h3: makeNodeComponent("h3"),
+    iframe: makeNodeComponent("iframe"),
+    button2: makeNodeComponent("button2"),
+    text: makeNodeComponent("text"),
     heroHomePage: makeNodeComponent("heroHomePage"),
     halcyonFooter: makeNodeComponent("halcyonFooter"),
     halcyonFooterBottom: makeNodeComponent("halcyonFooterBottom"),
