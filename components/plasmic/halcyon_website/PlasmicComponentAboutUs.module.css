@@ -99,7 +99,9 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text___61Kw3 {
-    font-size: 28px;
+    font-size: 32px;
+    text-align: center;
+    line-height: 1.25;
   }
 }
 .text__wobDe {
@@ -122,6 +124,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .text__wobDe {
     font-size: 16px;
+    text-align: center;
   }
 }
 .column___2AkNs {

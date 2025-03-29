@@ -179,7 +179,7 @@ function PlasmicContainerPrivates__RenderFunc(props: {
           )}
         >
           {
-            "Interested in Private Classes, Sessions, Photo Shoots, or Studio Rentals? Complete the form below to inquire about personalized experiences at Halcyon Studio. Whether you're looking for one-on-one instruction, a private group session, a professional photo shoot, or a serene space for your next event, we\u2019re here to accommodate your needs. Fill out the form, and we\u2019ll be in touch to create the perfect experience for you!"
+            "Whether you're looking for one-on-one instruction, a private group session, a professional photo shoot, or a serene space for your next event, we\u2019re here to accommodate your needs. Fill out the form, and we\u2019ll be in touch to create the perfect experience for you!"
           }
         </div>
       </Stack__>
