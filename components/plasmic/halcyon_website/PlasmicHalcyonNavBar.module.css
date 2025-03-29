@@ -152,16 +152,14 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__ceppj {
-    width: 100%;
-    min-width: 0;
+    width: auto;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__ceppj > :global(.__wab_flex-container) {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-content: space-around;
-    min-width: 0;
+    align-content: space-evenly;
     margin-left: calc(0px - 2px);
     width: calc(100% + 2px);
     margin-top: calc(0px - 2px);
@@ -214,6 +212,27 @@
   > picture
   > img {
   margin-left: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .membershipsLink > :global(.__wab_flex-container) {
+    margin-left: calc(0px - 4px);
+    width: calc(100% + 4px);
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .membershipsLink > :global(.__wab_flex-container) > *,
+  .membershipsLink > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .membershipsLink > :global(.__wab_flex-container) > picture > img,
+  .membershipsLink
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 4px;
+    margin-top: 0px;
+  }
 }
 .membershipsText {
   font-weight: 400;
@@ -271,6 +290,27 @@
   > img {
   margin-left: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .scheduleLink > :global(.__wab_flex-container) {
+    margin-left: calc(0px - 4px);
+    width: calc(100% + 4px);
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .scheduleLink > :global(.__wab_flex-container) > *,
+  .scheduleLink > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .scheduleLink > :global(.__wab_flex-container) > picture > img,
+  .scheduleLink
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 4px;
+    margin-top: 0px;
+  }
+}
 .scheduleText {
   font-weight: 400;
   color: var(--token-3mCwTaeNipOV);
@@ -327,6 +367,27 @@
   > img {
   margin-left: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .privateslink > :global(.__wab_flex-container) {
+    margin-left: calc(0px - 4px);
+    width: calc(100% + 4px);
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .privateslink > :global(.__wab_flex-container) > *,
+  .privateslink > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .privateslink > :global(.__wab_flex-container) > picture > img,
+  .privateslink
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 4px;
+    margin-top: 0px;
+  }
+}
 .loginText {
   font-weight: 400;
   color: var(--token-3mCwTaeNipOV);
@@ -381,6 +442,27 @@
   > picture
   > img {
   margin-left: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .aboutUsLink > :global(.__wab_flex-container) {
+    margin-left: calc(0px - 4px);
+    width: calc(100% + 4px);
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .aboutUsLink > :global(.__wab_flex-container) > *,
+  .aboutUsLink > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .aboutUsLink > :global(.__wab_flex-container) > picture > img,
+  .aboutUsLink
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 4px;
+    margin-top: 0px;
+  }
 }
 .text__ytTf4 {
   font-weight: 400;
@@ -437,6 +519,27 @@
   > img {
   margin-left: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .contactLink > :global(.__wab_flex-container) {
+    margin-left: calc(0px - 4px);
+    width: calc(100% + 4px);
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .contactLink > :global(.__wab_flex-container) > *,
+  .contactLink > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .contactLink > :global(.__wab_flex-container) > picture > img,
+  .contactLink
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 4px;
+    margin-top: 0px;
+  }
+}
 .text___0ITok {
   font-weight: 400;
   color: var(--token-3mCwTaeNipOV);
@@ -487,8 +590,8 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .loginLink > :global(.__wab_flex-container) {
-    margin-left: calc(0px - 8px);
-    width: calc(100% + 8px);
+    margin-left: calc(0px - 4px);
+    width: calc(100% + 4px);
     margin-top: calc(0px - 0px);
     height: calc(100% + 0px);
   }
@@ -502,7 +605,7 @@
     > :global(.__wab_slot)
     > picture
     > img {
-    margin-left: 8px;
+    margin-left: 4px;
     margin-top: 0px;
   }
 }
