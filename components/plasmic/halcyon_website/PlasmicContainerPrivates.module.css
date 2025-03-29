@@ -85,3 +85,8 @@
   min-width: 0;
   padding: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .text {
+    font-size: 18px;
+  }
+}

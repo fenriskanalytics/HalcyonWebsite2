@@ -96,7 +96,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__fsnt7 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .freeBox__uykbv {
@@ -170,4 +170,9 @@
   text-decoration-line: none;
   text-overflow: clip;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__izT3 {
+    font-size: 16px;
+  }
 }
