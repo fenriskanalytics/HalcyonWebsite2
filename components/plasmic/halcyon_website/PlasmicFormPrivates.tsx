@@ -75,8 +75,6 @@ import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect";
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 
-import { useScreenVariants as useScreenVariantsqAyk5ZgNfB } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: q_ayk5ZGNfB_/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -102,33 +100,18 @@ export const PlasmicFormPrivates__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicFormPrivates__OverridesType = {
   root?: Flex__<"div">;
+  freeBox?: Flex__<"div">;
   privatesForm?: Flex__<typeof FormWrapper>;
-  firstName?: Flex__<typeof FormItemWrapper>;
-  firstNameText?: Flex__<"div">;
-  firstNameInput?: Flex__<typeof AntdInput>;
-  lastName?: Flex__<typeof FormItemWrapper>;
-  lastNameText?: Flex__<"div">;
-  lastNameInput?: Flex__<typeof AntdInput>;
-  phone?: Flex__<typeof FormItemWrapper>;
-  phoneText?: Flex__<"div">;
-  phoneInput?: Flex__<typeof AntdInput>;
-  email?: Flex__<typeof FormItemWrapper>;
-  emailText?: Flex__<"div">;
-  emailInput?: Flex__<typeof AntdInput>;
-  expectedGuestsForm?: Flex__<typeof FormItemWrapper>;
-  expectedGuestsText?: Flex__<"div">;
-  expectedGuestsInput?: Flex__<typeof AntdInputNumber>;
-  interestedInForm?: Flex__<typeof FormItemWrapper>;
-  interestedInText?: Flex__<"div">;
-  interestedInSelect?: Flex__<typeof AntdSelect>;
-  createdat?: Flex__<typeof FormItemWrapper>;
-  createdAtInput?: Flex__<typeof AntdInput>;
-  commentsForm?: Flex__<typeof FormItemWrapper>;
-  commentsText?: Flex__<"div">;
-  commentsInput?: Flex__<typeof AntdInput>;
+  input?: Flex__<typeof AntdInput>;
+  input2?: Flex__<typeof AntdInput>;
+  input3?: Flex__<typeof AntdInput>;
+  input4?: Flex__<typeof AntdInput>;
+  numberInput?: Flex__<typeof AntdInputNumber>;
+  select?: Flex__<typeof AntdSelect>;
+  input5?: Flex__<typeof AntdInput>;
+  input6?: Flex__<typeof AntdInput>;
+  numberInput2?: Flex__<typeof AntdInputNumber>;
   submitButton?: Flex__<typeof AntdButton>;
-  id?: Flex__<typeof FormItemWrapper>;
-  idInput?: Flex__<typeof AntdInputNumber>;
 };
 
 export interface DefaultFormPrivatesProps {
@@ -199,70 +182,70 @@ function PlasmicFormPrivates__RenderFunc(props: {
         onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
       },
       {
-        path: "idInput.value",
+        path: "input.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "input2.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "input3.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "input4.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "numberInput.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "firstNameInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
-      },
-      {
-        path: "lastNameInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
-      },
-      {
-        path: "emailInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
-      },
-      {
-        path: "phoneInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
-      },
-      {
-        path: "expectedGuestsInput.value",
+        path: "select.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "interestedInSelect.value",
+        path: "input5.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "input6.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "numberInput2.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "createdAtInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
-      },
-      {
-        path: "commentsInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
       }
     ],
     [$props, $ctx, $refs]
@@ -275,10 +258,6 @@ function PlasmicFormPrivates__RenderFunc(props: {
   });
   const dataSourcesCtx = usePlasmicDataSourceContext();
   const plasmicInvalidate = usePlasmicInvalidate();
-
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsqAyk5ZgNfB()
-  });
 
   return (
     <div
@@ -296,7 +275,11 @@ function PlasmicFormPrivates__RenderFunc(props: {
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__o5HIi)}>
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      >
         <div
           className={classNames(
             projectcss.all,
@@ -451,47 +434,30 @@ function PlasmicFormPrivates__RenderFunc(props: {
               {...child$Props}
             >
               <FormItemWrapper
-                data-plasmic-name={"firstName"}
-                data-plasmic-override={overrides.firstName}
-                className={classNames("__wab_instance", sty.firstName)}
+                className={classNames("__wab_instance", sty.formField__pts86)}
                 initialValue={undefined}
-                label={
-                  <div
-                    data-plasmic-name={"firstNameText"}
-                    data-plasmic-override={overrides.firstNameText}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.firstNameText
-                    )}
-                  >
-                    {"First Name"}
-                  </div>
-                }
+                label={"First Name"}
                 name={"first_name"}
               >
                 {(() => {
                   const child$Props = {
-                    className: classNames("__wab_instance", sty.firstNameInput),
+                    className: classNames("__wab_instance", sty.input),
                     onChange: async (...eventArgs: any) => {
                       generateStateOnChangePropForCodeComponents(
                         $state,
                         "value",
-                        ["firstNameInput", "value"],
+                        ["input", "value"],
                         AntdInput_Helpers
                       ).apply(null, eventArgs);
                     },
-                    value: generateStateValueProp($state, [
-                      "firstNameInput",
-                      "value"
-                    ])
+                    value: generateStateValueProp($state, ["input", "value"])
                   };
                   initializeCodeComponentStates(
                     $state,
                     [
                       {
                         name: "value",
-                        plasmicStateName: "firstNameInput.value"
+                        plasmicStateName: "input.value"
                       }
                     ],
                     [],
@@ -501,55 +467,38 @@ function PlasmicFormPrivates__RenderFunc(props: {
 
                   return (
                     <AntdInput
-                      data-plasmic-name={"firstNameInput"}
-                      data-plasmic-override={overrides.firstNameInput}
+                      data-plasmic-name={"input"}
+                      data-plasmic-override={overrides.input}
                       {...child$Props}
                     />
                   );
                 })()}
               </FormItemWrapper>
               <FormItemWrapper
-                data-plasmic-name={"lastName"}
-                data-plasmic-override={overrides.lastName}
-                className={classNames("__wab_instance", sty.lastName)}
+                className={classNames("__wab_instance", sty.formField__oWaEj)}
                 initialValue={undefined}
-                label={
-                  <div
-                    data-plasmic-name={"lastNameText"}
-                    data-plasmic-override={overrides.lastNameText}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.lastNameText
-                    )}
-                  >
-                    {"Last Name"}
-                  </div>
-                }
+                label={"Last Name"}
                 name={"last_name"}
               >
                 {(() => {
                   const child$Props = {
-                    className: classNames("__wab_instance", sty.lastNameInput),
+                    className: classNames("__wab_instance", sty.input2),
                     onChange: async (...eventArgs: any) => {
                       generateStateOnChangePropForCodeComponents(
                         $state,
                         "value",
-                        ["lastNameInput", "value"],
+                        ["input2", "value"],
                         AntdInput_Helpers
                       ).apply(null, eventArgs);
                     },
-                    value: generateStateValueProp($state, [
-                      "lastNameInput",
-                      "value"
-                    ])
+                    value: generateStateValueProp($state, ["input2", "value"])
                   };
                   initializeCodeComponentStates(
                     $state,
                     [
                       {
                         name: "value",
-                        plasmicStateName: "lastNameInput.value"
+                        plasmicStateName: "input2.value"
                       }
                     ],
                     [],
@@ -559,55 +508,38 @@ function PlasmicFormPrivates__RenderFunc(props: {
 
                   return (
                     <AntdInput
-                      data-plasmic-name={"lastNameInput"}
-                      data-plasmic-override={overrides.lastNameInput}
+                      data-plasmic-name={"input2"}
+                      data-plasmic-override={overrides.input2}
                       {...child$Props}
                     />
                   );
                 })()}
               </FormItemWrapper>
               <FormItemWrapper
-                data-plasmic-name={"phone"}
-                data-plasmic-override={overrides.phone}
-                className={classNames("__wab_instance", sty.phone)}
+                className={classNames("__wab_instance", sty.formField___2FEsl)}
                 initialValue={undefined}
-                label={
-                  <div
-                    data-plasmic-name={"phoneText"}
-                    data-plasmic-override={overrides.phoneText}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.phoneText
-                    )}
-                  >
-                    {"Phone"}
-                  </div>
-                }
+                label={"Phone"}
                 name={"phone"}
               >
                 {(() => {
                   const child$Props = {
-                    className: classNames("__wab_instance", sty.phoneInput),
+                    className: classNames("__wab_instance", sty.input3),
                     onChange: async (...eventArgs: any) => {
                       generateStateOnChangePropForCodeComponents(
                         $state,
                         "value",
-                        ["phoneInput", "value"],
+                        ["input3", "value"],
                         AntdInput_Helpers
                       ).apply(null, eventArgs);
                     },
-                    value: generateStateValueProp($state, [
-                      "phoneInput",
-                      "value"
-                    ])
+                    value: generateStateValueProp($state, ["input3", "value"])
                   };
                   initializeCodeComponentStates(
                     $state,
                     [
                       {
                         name: "value",
-                        plasmicStateName: "phoneInput.value"
+                        plasmicStateName: "input3.value"
                       }
                     ],
                     [],
@@ -617,56 +549,39 @@ function PlasmicFormPrivates__RenderFunc(props: {
 
                   return (
                     <AntdInput
-                      data-plasmic-name={"phoneInput"}
-                      data-plasmic-override={overrides.phoneInput}
+                      data-plasmic-name={"input3"}
+                      data-plasmic-override={overrides.input3}
                       {...child$Props}
                     />
                   );
                 })()}
               </FormItemWrapper>
               <FormItemWrapper
-                data-plasmic-name={"email"}
-                data-plasmic-override={overrides.email}
-                className={classNames("__wab_instance", sty.email)}
-                label={
-                  <div
-                    data-plasmic-name={"emailText"}
-                    data-plasmic-override={overrides.emailText}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.emailText
-                    )}
-                  >
-                    {"Email"}
-                  </div>
-                }
+                className={classNames("__wab_instance", sty.formField___1IKyn)}
+                label={"Email"}
                 name={"email"}
                 rules={[{ ruleType: "advanced" }]}
                 valuePropName={"email"}
               >
                 {(() => {
                   const child$Props = {
-                    className: classNames("__wab_instance", sty.emailInput),
+                    className: classNames("__wab_instance", sty.input4),
                     onChange: async (...eventArgs: any) => {
                       generateStateOnChangePropForCodeComponents(
                         $state,
                         "value",
-                        ["emailInput", "value"],
+                        ["input4", "value"],
                         AntdInput_Helpers
                       ).apply(null, eventArgs);
                     },
-                    value: generateStateValueProp($state, [
-                      "emailInput",
-                      "value"
-                    ])
+                    value: generateStateValueProp($state, ["input4", "value"])
                   };
                   initializeCodeComponentStates(
                     $state,
                     [
                       {
                         name: "value",
-                        plasmicStateName: "emailInput.value"
+                        plasmicStateName: "input4.value"
                       }
                     ],
                     [],
@@ -676,132 +591,86 @@ function PlasmicFormPrivates__RenderFunc(props: {
 
                   return (
                     <AntdInput
-                      data-plasmic-name={"emailInput"}
-                      data-plasmic-override={overrides.emailInput}
+                      data-plasmic-name={"input4"}
+                      data-plasmic-override={overrides.input4}
                       {...child$Props}
                     />
                   );
                 })()}
               </FormItemWrapper>
-              <div className={classNames(projectcss.all, sty.freeBox___5B7H)}>
-                <FormItemWrapper
-                  data-plasmic-name={"expectedGuestsForm"}
-                  data-plasmic-override={overrides.expectedGuestsForm}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.expectedGuestsForm
-                  )}
-                  initialValue={undefined}
-                  label={
-                    <div
-                      data-plasmic-name={"expectedGuestsText"}
-                      data-plasmic-override={overrides.expectedGuestsText}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.expectedGuestsText
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "Expected Guests"
-                        : "Expected Number of Guests"}
-                    </div>
-                  }
-                  name={"number_guests"}
-                >
-                  <AntdInputNumber
-                    data-plasmic-name={"expectedGuestsInput"}
-                    data-plasmic-override={overrides.expectedGuestsInput}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.expectedGuestsInput
-                    )}
-                    onChange={async (...eventArgs: any) => {
-                      generateStateOnChangeProp($state, [
-                        "expectedGuestsInput",
-                        "value"
-                      ]).apply(null, eventArgs);
-                    }}
-                    type={"number"}
-                    value={generateStateValueProp($state, [
-                      "expectedGuestsInput",
-                      "value"
-                    ])}
-                  />
-                </FormItemWrapper>
-                <FormItemWrapper
-                  data-plasmic-name={"interestedInForm"}
-                  data-plasmic-override={overrides.interestedInForm}
-                  className={classNames("__wab_instance", sty.interestedInForm)}
-                  initialValue={undefined}
-                  label={
-                    <div
-                      data-plasmic-name={"interestedInText"}
-                      data-plasmic-override={overrides.interestedInText}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.interestedInText
-                      )}
-                    >
-                      {"Interested In"}
-                    </div>
-                  }
-                  name={"privates_type"}
-                >
-                  <AntdSelect
-                    data-plasmic-name={"interestedInSelect"}
-                    data-plasmic-override={overrides.interestedInSelect}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.interestedInSelect
-                    )}
-                    defaultStylesClassName={classNames(
-                      projectcss.root_reset,
-                      projectcss.plasmic_default_styles,
-                      projectcss.plasmic_mixins,
-                      projectcss.plasmic_tokens,
-                      plasmic_antd_5_hostless_css.plasmic_tokens
-                    )}
-                    onChange={async (...eventArgs: any) => {
-                      generateStateOnChangeProp($state, [
-                        "interestedInSelect",
-                        "value"
-                      ]).apply(null, eventArgs);
-                    }}
-                    options={(() => {
-                      const __composite = [
-                        { type: "option", label: null, value: null },
-                        { type: "option", label: null, value: null },
-                        { type: "option", label: null, value: null },
-                        { type: "option", label: null, value: null },
-                        { type: "option", label: null, value: null }
-                      ];
-                      __composite["0"]["label"] = "Private Yoga";
-                      __composite["0"]["value"] = "Private Yoga";
-                      __composite["1"]["label"] = "Private Pilates";
-                      __composite["1"]["value"] = "Private Pilates";
-                      __composite["2"]["label"] = "Studio Rental";
-                      __composite["2"]["value"] = "Studio Rental";
-                      __composite["3"]["label"] = "Photo Shoot";
-                      __composite["3"]["value"] = "Photo Shoot";
-                      __composite["4"]["label"] = "Other";
-                      __composite["4"]["value"] = "Other";
-                      return __composite;
-                    })()}
-                    placeholder={"Select..."}
-                    popupScopeClassName={sty["interestedInSelect__popup"]}
-                    value={generateStateValueProp($state, [
-                      "interestedInSelect",
-                      "value"
-                    ])}
-                  />
-                </FormItemWrapper>
-              </div>
               <FormItemWrapper
-                data-plasmic-name={"createdat"}
-                data-plasmic-override={overrides.createdat}
-                className={classNames("__wab_instance", sty.createdat)}
+                className={classNames("__wab_instance", sty.formField__qx3Xj)}
+                initialValue={undefined}
+                label={"Expected Number of Guests"}
+                name={"number_guests"}
+              >
+                <AntdInputNumber
+                  data-plasmic-name={"numberInput"}
+                  data-plasmic-override={overrides.numberInput}
+                  className={classNames("__wab_instance", sty.numberInput)}
+                  onChange={async (...eventArgs: any) => {
+                    generateStateOnChangeProp($state, [
+                      "numberInput",
+                      "value"
+                    ]).apply(null, eventArgs);
+                  }}
+                  type={"number"}
+                  value={generateStateValueProp($state, [
+                    "numberInput",
+                    "value"
+                  ])}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper
+                className={classNames("__wab_instance", sty.formField__k3ScK)}
+                initialValue={undefined}
+                label={"Interested In"}
+                name={"privates_type"}
+              >
+                <AntdSelect
+                  data-plasmic-name={"select"}
+                  data-plasmic-override={overrides.select}
+                  className={classNames("__wab_instance", sty.select)}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens
+                  )}
+                  onChange={async (...eventArgs: any) => {
+                    generateStateOnChangeProp($state, [
+                      "select",
+                      "value"
+                    ]).apply(null, eventArgs);
+                  }}
+                  options={(() => {
+                    const __composite = [
+                      { type: "option", label: null, value: null },
+                      { type: "option", label: null, value: null },
+                      { type: "option", label: null, value: null },
+                      { type: "option", label: null, value: null },
+                      { type: "option", label: null, value: null }
+                    ];
+                    __composite["0"]["label"] = "Private Yoga";
+                    __composite["0"]["value"] = "Private Yoga";
+                    __composite["1"]["label"] = "Private Pilates";
+                    __composite["1"]["value"] = "Private Pilates";
+                    __composite["2"]["label"] = "Studio Rental";
+                    __composite["2"]["value"] = "Studio Rental";
+                    __composite["3"]["label"] = "Photo Shoot";
+                    __composite["3"]["value"] = "Photo Shoot";
+                    __composite["4"]["label"] = "Other";
+                    __composite["4"]["value"] = "Other";
+                    return __composite;
+                  })()}
+                  placeholder={"Select..."}
+                  popupScopeClassName={sty["select__popup"]}
+                  value={generateStateValueProp($state, ["select", "value"])}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper
+                className={classNames("__wab_instance", sty.formField___9IfIh)}
                 hidden={true}
                 initialValue={undefined}
                 label={"created_at"}
@@ -809,26 +678,23 @@ function PlasmicFormPrivates__RenderFunc(props: {
               >
                 {(() => {
                   const child$Props = {
-                    className: classNames("__wab_instance", sty.createdAtInput),
+                    className: classNames("__wab_instance", sty.input5),
                     onChange: async (...eventArgs: any) => {
                       generateStateOnChangePropForCodeComponents(
                         $state,
                         "value",
-                        ["createdAtInput", "value"],
+                        ["input5", "value"],
                         AntdInput_Helpers
                       ).apply(null, eventArgs);
                     },
-                    value: generateStateValueProp($state, [
-                      "createdAtInput",
-                      "value"
-                    ])
+                    value: generateStateValueProp($state, ["input5", "value"])
                   };
                   initializeCodeComponentStates(
                     $state,
                     [
                       {
                         name: "value",
-                        plasmicStateName: "createdAtInput.value"
+                        plasmicStateName: "input5.value"
                       }
                     ],
                     [],
@@ -838,56 +704,38 @@ function PlasmicFormPrivates__RenderFunc(props: {
 
                   return (
                     <AntdInput
-                      data-plasmic-name={"createdAtInput"}
-                      data-plasmic-override={overrides.createdAtInput}
+                      data-plasmic-name={"input5"}
+                      data-plasmic-override={overrides.input5}
                       {...child$Props}
                     />
                   );
                 })()}
               </FormItemWrapper>
               <FormItemWrapper
-                data-plasmic-name={"commentsForm"}
-                data-plasmic-override={overrides.commentsForm}
-                className={classNames("__wab_instance", sty.commentsForm)}
+                className={classNames("__wab_instance", sty.formField__isKqB)}
                 initialValue={undefined}
-                label={
-                  <div
-                    data-plasmic-name={"commentsText"}
-                    data-plasmic-override={overrides.commentsText}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.commentsText
-                    )}
-                  >
-                    {"Comments"}
-                  </div>
-                }
+                label={"Comments"}
                 name={"comments"}
               >
                 {(() => {
                   const child$Props = {
-                    className: classNames("__wab_instance", sty.commentsInput),
+                    className: classNames("__wab_instance", sty.input6),
                     onChange: async (...eventArgs: any) => {
                       generateStateOnChangePropForCodeComponents(
                         $state,
                         "value",
-                        ["commentsInput", "value"],
+                        ["input6", "value"],
                         AntdInput_Helpers
                       ).apply(null, eventArgs);
                     },
-                    size: "large",
-                    value: generateStateValueProp($state, [
-                      "commentsInput",
-                      "value"
-                    ])
+                    value: generateStateValueProp($state, ["input6", "value"])
                   };
                   initializeCodeComponentStates(
                     $state,
                     [
                       {
                         name: "value",
-                        plasmicStateName: "commentsInput.value"
+                        plasmicStateName: "input6.value"
                       }
                     ],
                     [],
@@ -897,12 +745,36 @@ function PlasmicFormPrivates__RenderFunc(props: {
 
                   return (
                     <AntdInput
-                      data-plasmic-name={"commentsInput"}
-                      data-plasmic-override={overrides.commentsInput}
+                      data-plasmic-name={"input6"}
+                      data-plasmic-override={overrides.input6}
                       {...child$Props}
                     />
                   );
                 })()}
+              </FormItemWrapper>
+              <FormItemWrapper
+                className={classNames("__wab_instance", sty.formField__hSDhT)}
+                hidden={true}
+                initialValue={undefined}
+                label={"privates_id"}
+                name={"privates_id"}
+              >
+                <AntdInputNumber
+                  data-plasmic-name={"numberInput2"}
+                  data-plasmic-override={overrides.numberInput2}
+                  className={classNames("__wab_instance", sty.numberInput2)}
+                  onChange={async (...eventArgs: any) => {
+                    generateStateOnChangeProp($state, [
+                      "numberInput2",
+                      "value"
+                    ]).apply(null, eventArgs);
+                  }}
+                  type={"number"}
+                  value={generateStateValueProp($state, [
+                    "numberInput2",
+                    "value"
+                  ])}
+                />
               </FormItemWrapper>
               <AntdButton
                 data-plasmic-name={"submitButton"}
@@ -916,35 +788,12 @@ function PlasmicFormPrivates__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__anynx
+                    sty.text___5Wd5U
                   )}
                 >
                   {"Submit"}
                 </div>
               </AntdButton>
-              <FormItemWrapper
-                data-plasmic-name={"id"}
-                data-plasmic-override={overrides.id}
-                className={classNames("__wab_instance", sty.id)}
-                hidden={true}
-                initialValue={undefined}
-                label={"privates_id"}
-                name={"privates_id"}
-              >
-                <AntdInputNumber
-                  data-plasmic-name={"idInput"}
-                  data-plasmic-override={overrides.idInput}
-                  className={classNames("__wab_instance", sty.idInput)}
-                  onChange={async (...eventArgs: any) => {
-                    generateStateOnChangeProp($state, [
-                      "idInput",
-                      "value"
-                    ]).apply(null, eventArgs);
-                  }}
-                  type={"number"}
-                  value={generateStateValueProp($state, ["idInput", "value"])}
-                />
-              </FormItemWrapper>
             </FormWrapper>
           );
         })()}
@@ -956,130 +805,74 @@ function PlasmicFormPrivates__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "freeBox",
     "privatesForm",
-    "firstName",
-    "firstNameText",
-    "firstNameInput",
-    "lastName",
-    "lastNameText",
-    "lastNameInput",
-    "phone",
-    "phoneText",
-    "phoneInput",
-    "email",
-    "emailText",
-    "emailInput",
-    "expectedGuestsForm",
-    "expectedGuestsText",
-    "expectedGuestsInput",
-    "interestedInForm",
-    "interestedInText",
-    "interestedInSelect",
-    "createdat",
-    "createdAtInput",
-    "commentsForm",
-    "commentsText",
-    "commentsInput",
-    "submitButton",
-    "id",
-    "idInput"
+    "input",
+    "input2",
+    "input3",
+    "input4",
+    "numberInput",
+    "select",
+    "input5",
+    "input6",
+    "numberInput2",
+    "submitButton"
+  ],
+  freeBox: [
+    "freeBox",
+    "privatesForm",
+    "input",
+    "input2",
+    "input3",
+    "input4",
+    "numberInput",
+    "select",
+    "input5",
+    "input6",
+    "numberInput2",
+    "submitButton"
   ],
   privatesForm: [
     "privatesForm",
-    "firstName",
-    "firstNameText",
-    "firstNameInput",
-    "lastName",
-    "lastNameText",
-    "lastNameInput",
-    "phone",
-    "phoneText",
-    "phoneInput",
-    "email",
-    "emailText",
-    "emailInput",
-    "expectedGuestsForm",
-    "expectedGuestsText",
-    "expectedGuestsInput",
-    "interestedInForm",
-    "interestedInText",
-    "interestedInSelect",
-    "createdat",
-    "createdAtInput",
-    "commentsForm",
-    "commentsText",
-    "commentsInput",
-    "submitButton",
-    "id",
-    "idInput"
+    "input",
+    "input2",
+    "input3",
+    "input4",
+    "numberInput",
+    "select",
+    "input5",
+    "input6",
+    "numberInput2",
+    "submitButton"
   ],
-  firstName: ["firstName", "firstNameText", "firstNameInput"],
-  firstNameText: ["firstNameText"],
-  firstNameInput: ["firstNameInput"],
-  lastName: ["lastName", "lastNameText", "lastNameInput"],
-  lastNameText: ["lastNameText"],
-  lastNameInput: ["lastNameInput"],
-  phone: ["phone", "phoneText", "phoneInput"],
-  phoneText: ["phoneText"],
-  phoneInput: ["phoneInput"],
-  email: ["email", "emailText", "emailInput"],
-  emailText: ["emailText"],
-  emailInput: ["emailInput"],
-  expectedGuestsForm: [
-    "expectedGuestsForm",
-    "expectedGuestsText",
-    "expectedGuestsInput"
-  ],
-  expectedGuestsText: ["expectedGuestsText"],
-  expectedGuestsInput: ["expectedGuestsInput"],
-  interestedInForm: [
-    "interestedInForm",
-    "interestedInText",
-    "interestedInSelect"
-  ],
-  interestedInText: ["interestedInText"],
-  interestedInSelect: ["interestedInSelect"],
-  createdat: ["createdat", "createdAtInput"],
-  createdAtInput: ["createdAtInput"],
-  commentsForm: ["commentsForm", "commentsText", "commentsInput"],
-  commentsText: ["commentsText"],
-  commentsInput: ["commentsInput"],
-  submitButton: ["submitButton"],
-  id: ["id", "idInput"],
-  idInput: ["idInput"]
+  input: ["input"],
+  input2: ["input2"],
+  input3: ["input3"],
+  input4: ["input4"],
+  numberInput: ["numberInput"],
+  select: ["select"],
+  input5: ["input5"],
+  input6: ["input6"],
+  numberInput2: ["numberInput2"],
+  submitButton: ["submitButton"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  freeBox: "div";
   privatesForm: typeof FormWrapper;
-  firstName: typeof FormItemWrapper;
-  firstNameText: "div";
-  firstNameInput: typeof AntdInput;
-  lastName: typeof FormItemWrapper;
-  lastNameText: "div";
-  lastNameInput: typeof AntdInput;
-  phone: typeof FormItemWrapper;
-  phoneText: "div";
-  phoneInput: typeof AntdInput;
-  email: typeof FormItemWrapper;
-  emailText: "div";
-  emailInput: typeof AntdInput;
-  expectedGuestsForm: typeof FormItemWrapper;
-  expectedGuestsText: "div";
-  expectedGuestsInput: typeof AntdInputNumber;
-  interestedInForm: typeof FormItemWrapper;
-  interestedInText: "div";
-  interestedInSelect: typeof AntdSelect;
-  createdat: typeof FormItemWrapper;
-  createdAtInput: typeof AntdInput;
-  commentsForm: typeof FormItemWrapper;
-  commentsText: "div";
-  commentsInput: typeof AntdInput;
+  input: typeof AntdInput;
+  input2: typeof AntdInput;
+  input3: typeof AntdInput;
+  input4: typeof AntdInput;
+  numberInput: typeof AntdInputNumber;
+  select: typeof AntdSelect;
+  input5: typeof AntdInput;
+  input6: typeof AntdInput;
+  numberInput2: typeof AntdInputNumber;
   submitButton: typeof AntdButton;
-  id: typeof FormItemWrapper;
-  idInput: typeof AntdInputNumber;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1142,33 +935,18 @@ export const PlasmicFormPrivates = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
     privatesForm: makeNodeComponent("privatesForm"),
-    firstName: makeNodeComponent("firstName"),
-    firstNameText: makeNodeComponent("firstNameText"),
-    firstNameInput: makeNodeComponent("firstNameInput"),
-    lastName: makeNodeComponent("lastName"),
-    lastNameText: makeNodeComponent("lastNameText"),
-    lastNameInput: makeNodeComponent("lastNameInput"),
-    phone: makeNodeComponent("phone"),
-    phoneText: makeNodeComponent("phoneText"),
-    phoneInput: makeNodeComponent("phoneInput"),
-    email: makeNodeComponent("email"),
-    emailText: makeNodeComponent("emailText"),
-    emailInput: makeNodeComponent("emailInput"),
-    expectedGuestsForm: makeNodeComponent("expectedGuestsForm"),
-    expectedGuestsText: makeNodeComponent("expectedGuestsText"),
-    expectedGuestsInput: makeNodeComponent("expectedGuestsInput"),
-    interestedInForm: makeNodeComponent("interestedInForm"),
-    interestedInText: makeNodeComponent("interestedInText"),
-    interestedInSelect: makeNodeComponent("interestedInSelect"),
-    createdat: makeNodeComponent("createdat"),
-    createdAtInput: makeNodeComponent("createdAtInput"),
-    commentsForm: makeNodeComponent("commentsForm"),
-    commentsText: makeNodeComponent("commentsText"),
-    commentsInput: makeNodeComponent("commentsInput"),
+    input: makeNodeComponent("input"),
+    input2: makeNodeComponent("input2"),
+    input3: makeNodeComponent("input3"),
+    input4: makeNodeComponent("input4"),
+    numberInput: makeNodeComponent("numberInput"),
+    select: makeNodeComponent("select"),
+    input5: makeNodeComponent("input5"),
+    input6: makeNodeComponent("input6"),
+    numberInput2: makeNodeComponent("numberInput2"),
     submitButton: makeNodeComponent("submitButton"),
-    id: makeNodeComponent("id"),
-    idInput: makeNodeComponent("idInput"),
 
     // Metadata about props expected for PlasmicFormPrivates
     internalVariantProps: PlasmicFormPrivates__VariantProps,

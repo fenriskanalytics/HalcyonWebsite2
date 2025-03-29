@@ -180,6 +180,14 @@
   --plasmic-mixin-newsletter-field-preset_white-space: var(
     --mixin-htbMssnRBvaS_white-space
   );
+  --mixin-AwyXYeFwaMw5_white-space: pre-wrap;
+  --plasmic-mixin-form-preset_white-space: var(
+    --mixin-AwyXYeFwaMw5_white-space
+  );
+  --mixin-Yy5jUGQc8d2t_white-space: pre-wrap;
+  --plasmic-mixin-unnamed-style-preset-2_white-space: var(
+    --mixin-Yy5jUGQc8d2t_white-space
+  );
 }
 
 :where(.all) {

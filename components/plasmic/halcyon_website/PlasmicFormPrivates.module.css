@@ -8,7 +8,7 @@
   align-items: center;
   min-width: 0;
 }
-.freeBox__o5HIi {
+.freeBox {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -54,125 +54,92 @@
   align-items: center;
   object-fit: cover;
   color: var(--token-7HpDdqXawcwS);
-  background: none;
+  background: #ffffff;
   font-family: "Playfair Display", serif;
   box-shadow: none;
   min-width: 0;
   border-radius: 6px;
   padding: 8px;
 }
-.firstName:global(.__wab_instance) {
+.formField__pts86:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.firstNameText {
-  color: var(--token-7HpDdqXawcwS);
-  font-family: "Playfair Display", serif;
-}
-.firstNameInput:global(.__wab_instance) {
+.input:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.lastName:global(.__wab_instance) {
+.formField__oWaEj:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.lastNameText {
-  color: var(--token-7HpDdqXawcwS);
-  font-family: "Playfair Display", serif;
-}
-.lastNameInput:global(.__wab_instance) {
+.input2:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
 }
-.phone:global(.__wab_instance) {
+.formField___2FEsl:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.phoneText {
-  color: var(--token-7HpDdqXawcwS);
-  font-family: "Playfair Display", serif;
-}
-.phoneInput:global(.__wab_instance) {
+.input3:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.email:global(.__wab_instance) {
+.formField___1IKyn:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.emailText {
-  color: var(--token-7HpDdqXawcwS);
-  font-family: "Playfair Display", serif;
-}
-.emailInput:global(.__wab_instance) {
+.input4:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.freeBox___5B7H {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 18px;
-  min-width: 0;
-  padding: 0px;
-}
-.expectedGuestsForm:global(.__wab_instance) {
-  width: 100%;
-  margin-right: 6px;
-  min-width: 0;
-}
-.expectedGuestsText {
-  color: var(--token-7HpDdqXawcwS);
-  font-family: "Playfair Display", serif;
-}
-.expectedGuestsInput:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  width: 573px;
-}
-.interestedInForm:global(.__wab_instance) {
-  width: 100%;
-  margin-bottom: 0px;
-  margin-left: 6px;
-  min-width: 0;
-}
-.interestedInText {
-  color: var(--token-7HpDdqXawcwS);
-  font-family: "Playfair Display", serif;
-}
-.interestedInSelect:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-}
-.createdat:global(.__wab_instance) {
+.formField__qx3Xj:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.createdAtInput:global(.__wab_instance) {
+.numberInput:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.commentsForm:global(.__wab_instance) {
+.formField__k3ScK:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.commentsText {
-  color: var(--token-7HpDdqXawcwS);
-  font-family: "Playfair Display", serif;
+.select:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
 }
-.commentsInput:global(.__wab_instance) {
+.formField___9IfIh:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.input5:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.formField__isKqB:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.input6:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.formField__hSDhT:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.numberInput2:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -182,7 +149,7 @@
   background: var(--token-7HpDdqXawcwS);
   margin-bottom: 12px;
 }
-.text__anynx {
+.text___5Wd5U {
   position: relative;
   width: 100%;
   height: auto;
@@ -200,13 +167,4 @@
   text-decoration-line: none !important;
   text-overflow: clip !important;
   min-width: 0;
-}
-.id:global(.__wab_instance) {
-  width: 100%;
-  margin-bottom: 24px;
-  min-width: 0;
-}
-.idInput:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
 }

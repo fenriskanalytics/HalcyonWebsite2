@@ -406,6 +406,7 @@ function PlasmicPrivatesForm2__RenderFunc(props: {
             >
               {(() => {
                 const child$Props = {
+                  bordered: true,
                   className: classNames("__wab_instance", sty.firstNameInput),
                   onChange: async (...eventArgs: any) => {
                     generateStateOnChangePropForCodeComponents(
@@ -722,8 +723,21 @@ function PlasmicPrivatesForm2__RenderFunc(props: {
                     __composite["4"]["value"] = "Other";
                     return __composite;
                   })()}
-                  placeholder={"Select..."}
+                  placeholder={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__kJqN1
+                      )}
+                    >
+                      {"Select..."}
+                    </div>
+                  }
                   popupScopeClassName={sty["interestedInSelect__popup"]}
+                  triggerClassName={classNames({
+                    [sty["pcls_RyN-1n2DTmJ8"]]: true
+                  })}
                   value={generateStateValueProp($state, [
                     "interestedInSelect",
                     "value"

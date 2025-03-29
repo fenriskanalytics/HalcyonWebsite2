@@ -50,6 +50,7 @@
   font-family: "Playfair Display", serif;
 }
 .firstNameInput:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
 }
@@ -64,6 +65,7 @@
   font-family: "Playfair Display", serif;
 }
 .lastNameInput:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
 }
@@ -79,6 +81,7 @@
   font-family: "Playfair Display", serif;
 }
 .phoneInput:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
 }
@@ -94,6 +97,7 @@
   font-family: "Playfair Display", serif;
 }
 .emailInput:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
 }
@@ -122,8 +126,16 @@
   font-family: "Playfair Display", serif;
 }
 .interestedInSelect:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
+}
+.interestedInSelect :global(.ant-select-selector):global(.ant-select-selector) {
+  background: var(--token-Gsg_nXB6YK5A);
+  outline: none;
+}
+.text__kJqN1 {
+  background: var(--token-Gsg_nXB6YK5A);
 }
 .numberGuests:global(.__wab_instance) {
   width: 100%;
@@ -137,9 +149,10 @@
   font-family: "Playfair Display", serif;
 }
 .guestsNumberInput:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
-  width: 581px;
+  width: 559px;
   margin-left: 3px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -159,6 +172,7 @@
   font-family: "Playfair Display", serif;
 }
 .commentsInput:global(.__wab_instance) {
+  background: var(--token-Gsg_nXB6YK5A);
   max-width: 100%;
   object-fit: cover;
 }
