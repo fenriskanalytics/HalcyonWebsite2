@@ -19,7 +19,7 @@ function HomeSection_(
         props: {
           onClick: (e: React.MouseEvent) => {
             e.preventDefault();
-            window.location.href = "https://www.halcyonstudio.us/memberships/";
+            window.location.replace("https://www.halcyonstudio.us/memberships/");
           },
         },
       }}
