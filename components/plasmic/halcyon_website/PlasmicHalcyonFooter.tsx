@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -101,11 +101,17 @@ export type PlasmicHalcyonFooter__OverridesType = {
   pinterestIcon?: Flex__<"svg">;
   twitterIcon?: Flex__<"svg">;
   homePage?: Flex__<"a"> & Partial<LinkProps>;
+  homeText?: Flex__<"div">;
   membershipsPage?: Flex__<"a"> & Partial<LinkProps>;
+  membershipsText?: Flex__<"div">;
   schedulePage?: Flex__<"a"> & Partial<LinkProps>;
+  homeText3?: Flex__<"div">;
   privatesPage?: Flex__<"a"> & Partial<LinkProps>;
+  homeText6?: Flex__<"div">;
   aboutUsPage?: Flex__<"a"> & Partial<LinkProps>;
+  homeText4?: Flex__<"div">;
   contactPage?: Flex__<"a"> & Partial<LinkProps>;
+  homeText5?: Flex__<"div">;
   privacyPolicyPage?: Flex__<"a"> & Partial<LinkProps>;
   termsOfServicePage?: Flex__<"a"> & Partial<LinkProps>;
   cookiesPolicyPage?: Flex__<"a"> & Partial<LinkProps>;
@@ -457,18 +463,23 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
             <PlasmicLink__
               data-plasmic-name={"homePage"}
               data-plasmic-override={overrides.homePage}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.homePage
-              )}
+              className={classNames(projectcss.all, projectcss.a, sty.homePage)}
               component={Link}
               href={`/home`}
               platform={"nextjs"}
               tabIndex={1}
             >
-              {"Home"}
+              <div
+                data-plasmic-name={"homeText"}
+                data-plasmic-override={overrides.homeText}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.homeText
+                )}
+              >
+                {"Home"}
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"membershipsPage"}
@@ -476,7 +487,6 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                projectcss.__wab_text,
                 sty.membershipsPage
               )}
               component={Link}
@@ -484,7 +494,17 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               platform={"nextjs"}
               tabIndex={2}
             >
-              {"Memberships"}
+              <div
+                data-plasmic-name={"membershipsText"}
+                data-plasmic-override={overrides.membershipsText}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.membershipsText
+                )}
+              >
+                {"Memberships"}
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"schedulePage"}
@@ -492,7 +512,6 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                projectcss.__wab_text,
                 sty.schedulePage
               )}
               component={Link}
@@ -500,7 +519,17 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               platform={"nextjs"}
               tabIndex={3}
             >
-              {"Schedule"}
+              <div
+                data-plasmic-name={"homeText3"}
+                data-plasmic-override={overrides.homeText3}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.homeText3
+                )}
+              >
+                {"Schedule"}
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"privatesPage"}
@@ -508,7 +537,6 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                projectcss.__wab_text,
                 sty.privatesPage
               )}
               component={Link}
@@ -516,7 +544,17 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               platform={"nextjs"}
               tabIndex={4}
             >
-              {"Privates"}
+              <div
+                data-plasmic-name={"homeText6"}
+                data-plasmic-override={overrides.homeText6}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.homeText6
+                )}
+              >
+                {"Privates"}
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"aboutUsPage"}
@@ -524,7 +562,6 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                projectcss.__wab_text,
                 sty.aboutUsPage
               )}
               component={Link}
@@ -532,7 +569,17 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               platform={"nextjs"}
               tabIndex={5}
             >
-              {"About Us"}
+              <div
+                data-plasmic-name={"homeText4"}
+                data-plasmic-override={overrides.homeText4}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.homeText4
+                )}
+              >
+                {"About Us"}
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"contactPage"}
@@ -540,7 +587,6 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                projectcss.__wab_text,
                 sty.contactPage
               )}
               component={Link}
@@ -548,7 +594,17 @@ function PlasmicHalcyonFooter__RenderFunc(props: {
               platform={"nextjs"}
               tabIndex={6}
             >
-              {"Contact"}
+              <div
+                data-plasmic-name={"homeText5"}
+                data-plasmic-override={overrides.homeText5}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.homeText5
+                )}
+              >
+                {"Contact"}
+              </div>
             </PlasmicLink__>
             <div className={classNames(projectcss.all, sty.freeBox__xdPun)}>
               <PlasmicLink__
@@ -717,11 +773,17 @@ const PlasmicDescendants = {
     "pinterestIcon",
     "twitterIcon",
     "homePage",
+    "homeText",
     "membershipsPage",
+    "membershipsText",
     "schedulePage",
+    "homeText3",
     "privatesPage",
+    "homeText6",
     "aboutUsPage",
+    "homeText4",
     "contactPage",
+    "homeText5",
     "privacyPolicyPage",
     "termsOfServicePage",
     "cookiesPolicyPage",
@@ -738,11 +800,17 @@ const PlasmicDescendants = {
     "pinterestIcon",
     "twitterIcon",
     "homePage",
+    "homeText",
     "membershipsPage",
+    "membershipsText",
     "schedulePage",
+    "homeText3",
     "privatesPage",
+    "homeText6",
     "aboutUsPage",
+    "homeText4",
     "contactPage",
+    "homeText5",
     "privacyPolicyPage",
     "termsOfServicePage",
     "cookiesPolicyPage",
@@ -756,12 +824,18 @@ const PlasmicDescendants = {
   pinterestIcon2: ["pinterestIcon2"],
   pinterestIcon: ["pinterestIcon"],
   twitterIcon: ["twitterIcon"],
-  homePage: ["homePage"],
-  membershipsPage: ["membershipsPage"],
-  schedulePage: ["schedulePage"],
-  privatesPage: ["privatesPage"],
-  aboutUsPage: ["aboutUsPage"],
-  contactPage: ["contactPage"],
+  homePage: ["homePage", "homeText"],
+  homeText: ["homeText"],
+  membershipsPage: ["membershipsPage", "membershipsText"],
+  membershipsText: ["membershipsText"],
+  schedulePage: ["schedulePage", "homeText3"],
+  homeText3: ["homeText3"],
+  privatesPage: ["privatesPage", "homeText6"],
+  homeText6: ["homeText6"],
+  aboutUsPage: ["aboutUsPage", "homeText4"],
+  homeText4: ["homeText4"],
+  contactPage: ["contactPage", "homeText5"],
+  homeText5: ["homeText5"],
   privacyPolicyPage: ["privacyPolicyPage"],
   termsOfServicePage: ["termsOfServicePage"],
   cookiesPolicyPage: ["cookiesPolicyPage"],
@@ -782,11 +856,17 @@ type NodeDefaultElementType = {
   pinterestIcon: "svg";
   twitterIcon: "svg";
   homePage: "a";
+  homeText: "div";
   membershipsPage: "a";
+  membershipsText: "div";
   schedulePage: "a";
+  homeText3: "div";
   privatesPage: "a";
+  homeText6: "div";
   aboutUsPage: "a";
+  homeText4: "div";
   contactPage: "a";
+  homeText5: "div";
   privacyPolicyPage: "a";
   termsOfServicePage: "a";
   cookiesPolicyPage: "a";
@@ -863,11 +943,17 @@ export const PlasmicHalcyonFooter = Object.assign(
     pinterestIcon: makeNodeComponent("pinterestIcon"),
     twitterIcon: makeNodeComponent("twitterIcon"),
     homePage: makeNodeComponent("homePage"),
+    homeText: makeNodeComponent("homeText"),
     membershipsPage: makeNodeComponent("membershipsPage"),
+    membershipsText: makeNodeComponent("membershipsText"),
     schedulePage: makeNodeComponent("schedulePage"),
+    homeText3: makeNodeComponent("homeText3"),
     privatesPage: makeNodeComponent("privatesPage"),
+    homeText6: makeNodeComponent("homeText6"),
     aboutUsPage: makeNodeComponent("aboutUsPage"),
+    homeText4: makeNodeComponent("homeText4"),
     contactPage: makeNodeComponent("contactPage"),
+    homeText5: makeNodeComponent("homeText5"),
     privacyPolicyPage: makeNodeComponent("privacyPolicyPage"),
     termsOfServicePage: makeNodeComponent("termsOfServicePage"),
     cookiesPolicyPage: makeNodeComponent("cookiesPolicyPage"),

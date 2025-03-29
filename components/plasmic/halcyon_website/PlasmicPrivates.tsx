@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -61,7 +61,7 @@ import {
 
 import HalcyonNavBar from "../../HalcyonNavBar"; // plasmic-import: UDe2_-rIrkzi/component
 import ContainerPrivates from "../../ContainerPrivates"; // plasmic-import: PZjNRg33hRNg/component
-import FormPrivates from "../../FormPrivates"; // plasmic-import: v0QNEp-b2qKw/component
+import PrivatesForm2 from "../../PrivatesForm2"; // plasmic-import: DGQUyhUXa44C/component
 import HalcyonFooter from "../../HalcyonFooter"; // plasmic-import: WgtcOX7lLlZ3/component
 import HalcyonFooterBottom from "../../HalcyonFooterBottom"; // plasmic-import: DyM3o4afMIzM/component
 
@@ -88,7 +88,7 @@ export type PlasmicPrivates__OverridesType = {
   section?: Flex__<"section">;
   containerPrivates?: Flex__<typeof ContainerPrivates>;
   freeBox?: Flex__<"div">;
-  formPrivates?: Flex__<typeof FormPrivates>;
+  privatesForm2?: Flex__<typeof PrivatesForm2>;
   halcyonFooter?: Flex__<typeof HalcyonFooter>;
   halcyonFooterBottom?: Flex__<typeof HalcyonFooterBottom>;
 };
@@ -181,10 +181,10 @@ function PlasmicPrivates__RenderFunc(props: {
               data-plasmic-override={overrides.freeBox}
               className={classNames(projectcss.all, sty.freeBox)}
             >
-              <FormPrivates
-                data-plasmic-name={"formPrivates"}
-                data-plasmic-override={overrides.formPrivates}
-                className={classNames("__wab_instance", sty.formPrivates)}
+              <PrivatesForm2
+                data-plasmic-name={"privatesForm2"}
+                data-plasmic-override={overrides.privatesForm2}
+                className={classNames("__wab_instance", sty.privatesForm2)}
               />
             </div>
           </section>
@@ -212,15 +212,15 @@ const PlasmicDescendants = {
     "section",
     "containerPrivates",
     "freeBox",
-    "formPrivates",
+    "privatesForm2",
     "halcyonFooter",
     "halcyonFooterBottom"
   ],
   halcyonNavBar: ["halcyonNavBar"],
-  section: ["section", "containerPrivates", "freeBox", "formPrivates"],
+  section: ["section", "containerPrivates", "freeBox", "privatesForm2"],
   containerPrivates: ["containerPrivates"],
-  freeBox: ["freeBox", "formPrivates"],
-  formPrivates: ["formPrivates"],
+  freeBox: ["freeBox", "privatesForm2"],
+  privatesForm2: ["privatesForm2"],
   halcyonFooter: ["halcyonFooter"],
   halcyonFooterBottom: ["halcyonFooterBottom"]
 } as const;
@@ -233,7 +233,7 @@ type NodeDefaultElementType = {
   section: "section";
   containerPrivates: typeof ContainerPrivates;
   freeBox: "div";
-  formPrivates: typeof FormPrivates;
+  privatesForm2: typeof PrivatesForm2;
   halcyonFooter: typeof HalcyonFooter;
   halcyonFooterBottom: typeof HalcyonFooterBottom;
 };
@@ -302,7 +302,7 @@ export const PlasmicPrivates = Object.assign(
     section: makeNodeComponent("section"),
     containerPrivates: makeNodeComponent("containerPrivates"),
     freeBox: makeNodeComponent("freeBox"),
-    formPrivates: makeNodeComponent("formPrivates"),
+    privatesForm2: makeNodeComponent("privatesForm2"),
     halcyonFooter: makeNodeComponent("halcyonFooter"),
     halcyonFooterBottom: makeNodeComponent("halcyonFooterBottom"),
 

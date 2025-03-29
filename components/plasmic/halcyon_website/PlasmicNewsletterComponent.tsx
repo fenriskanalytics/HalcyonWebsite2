@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -96,10 +96,13 @@ export const PlasmicNewsletterComponent__ArgProps = new Array<ArgPropType>();
 export type PlasmicNewsletterComponent__OverridesType = {
   root?: Flex__<"div">;
   h2?: Flex__<"h2">;
-  form?: Flex__<typeof FormWrapper>;
+  newsletterForm?: Flex__<typeof FormWrapper>;
+  id?: Flex__<typeof FormItemWrapper>;
   numberInput?: Flex__<typeof AntdInputNumber>;
+  createdAt?: Flex__<typeof FormItemWrapper>;
   input?: Flex__<typeof AntdInput>;
   freeBox?: Flex__<"div">;
+  newsletterEmail?: Flex__<typeof FormItemWrapper>;
   input2?: Flex__<typeof AntdInput>;
   button?: Flex__<typeof AntdButton>;
   text?: Flex__<"div">;
@@ -147,27 +150,29 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $globalActions = useGlobalActions?.();
+
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
   >({});
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "form.value",
+        path: "newsletterForm.value",
         type: "private",
         variableType: "object",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
 
-        refName: "form",
+        refName: "newsletterForm",
         onMutate: generateOnMutateForSpec("value", FormWrapper_Helpers)
       },
       {
-        path: "form.isSubmitting",
+        path: "newsletterForm.isSubmitting",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false,
 
-        refName: "form",
+        refName: "newsletterForm",
         onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
       },
       {
@@ -254,12 +259,12 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
       </h2>
       {(() => {
         const child$Props = {
-          className: classNames("__wab_instance", sty.form),
+          className: classNames("__wab_instance", sty.newsletterForm),
           extendedOnValuesChange: async (...eventArgs: any) => {
             generateStateOnChangePropForCodeComponents(
               $state,
               "value",
-              ["form", "value"],
+              ["newsletterForm", "value"],
               FormWrapper_Helpers
             ).apply(null, eventArgs);
           },
@@ -280,7 +285,7 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
                       sourceId: "wp17K6dTyNJfMVu3RB7ygH",
                       opId: "5e87df9b-4060-4f89-ada0-ac8f258958f5",
                       userArgs: {
-                        variables: [$state.form.value]
+                        variables: [$state.newsletterForm.value]
                       },
                       cacheKey: null,
                       invalidatedKeys: ["plasmic_refresh_all"],
@@ -311,17 +316,87 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
             ) {
               $steps["defaultSubmit"] = await $steps["defaultSubmit"];
             }
+
+            $steps["invokeGlobalAction"] = true
+              ? (() => {
+                  const actionArgs = {
+                    args: [
+                      "success",
+                      "Thanks For Signing Up!",
+                      undefined,
+                      undefined,
+                      "bottom"
+                    ]
+                  };
+                  return $globalActions[
+                    "plasmic-antd5-config-provider.showNotification"
+                  ]?.apply(null, [...actionArgs.args]);
+                })()
+              : undefined;
+            if (
+              $steps["invokeGlobalAction"] != null &&
+              typeof $steps["invokeGlobalAction"] === "object" &&
+              typeof $steps["invokeGlobalAction"].then === "function"
+            ) {
+              $steps["invokeGlobalAction"] = await $steps["invokeGlobalAction"];
+            }
+
+            $steps["runActionOnForm"] = true
+              ? (() => {
+                  const actionArgs = {
+                    tplRef: "newsletterForm",
+                    action: "resetFields"
+                  };
+                  return (({ tplRef, action, args }) => {
+                    return $refs?.[tplRef]?.[action]?.(...(args ?? []));
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["runActionOnForm"] != null &&
+              typeof $steps["runActionOnForm"] === "object" &&
+              typeof $steps["runActionOnForm"].then === "function"
+            ) {
+              $steps["runActionOnForm"] = await $steps["runActionOnForm"];
+            }
+          },
+          onFinishFailed: async data => {
+            const $steps = {};
+
+            $steps["invokeGlobalAction"] = true
+              ? (() => {
+                  const actionArgs = {
+                    args: [
+                      "error",
+                      "Please Enter a Valid Email",
+                      undefined,
+                      undefined,
+                      "bottom"
+                    ]
+                  };
+                  return $globalActions[
+                    "plasmic-antd5-config-provider.showNotification"
+                  ]?.apply(null, [...actionArgs.args]);
+                })()
+              : undefined;
+            if (
+              $steps["invokeGlobalAction"] != null &&
+              typeof $steps["invokeGlobalAction"] === "object" &&
+              typeof $steps["invokeGlobalAction"].then === "function"
+            ) {
+              $steps["invokeGlobalAction"] = await $steps["invokeGlobalAction"];
+            }
           },
           onIsSubmittingChange: async (...eventArgs: any) => {
             generateStateOnChangePropForCodeComponents(
               $state,
               "isSubmitting",
-              ["form", "isSubmitting"],
+              ["newsletterForm", "isSubmitting"],
               FormWrapper_Helpers
             ).apply(null, eventArgs);
           },
           ref: ref => {
-            $refs["form"] = ref;
+            $refs["newsletterForm"] = ref;
           },
           submitSlot: null,
           wrapperCol: { span: 16, horizontalOnly: true }
@@ -331,11 +406,11 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
           [
             {
               name: "value",
-              plasmicStateName: "form.value"
+              plasmicStateName: "newsletterForm.value"
             },
             {
               name: "isSubmitting",
-              plasmicStateName: "form.isSubmitting"
+              plasmicStateName: "newsletterForm.isSubmitting"
             }
           ],
           [],
@@ -345,12 +420,14 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
 
         return (
           <FormWrapper
-            data-plasmic-name={"form"}
-            data-plasmic-override={overrides.form}
+            data-plasmic-name={"newsletterForm"}
+            data-plasmic-override={overrides.newsletterForm}
             {...child$Props}
           >
             <FormItemWrapper
-              className={classNames("__wab_instance", sty.formField__tn0Ym)}
+              data-plasmic-name={"id"}
+              data-plasmic-override={overrides.id}
+              className={classNames("__wab_instance", sty.id)}
               hidden={true}
               initialValue={undefined}
               label={"id"}
@@ -371,7 +448,9 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
               />
             </FormItemWrapper>
             <FormItemWrapper
-              className={classNames("__wab_instance", sty.formField___87Cai)}
+              data-plasmic-name={"createdAt"}
+              data-plasmic-override={overrides.createdAt}
+              className={classNames("__wab_instance", sty.createdAt)}
               hidden={true}
               initialValue={undefined}
               label={"created_at"}
@@ -418,7 +497,9 @@ function PlasmicNewsletterComponent__RenderFunc(props: {
               className={classNames(projectcss.all, sty.freeBox)}
             >
               <FormItemWrapper
-                className={classNames("__wab_instance", sty.formField__l39Yv)}
+                data-plasmic-name={"newsletterEmail"}
+                data-plasmic-override={overrides.newsletterEmail}
+                className={classNames("__wab_instance", sty.newsletterEmail)}
                 initialValue={undefined}
                 label={""}
                 labelAlign={"left"}
@@ -494,19 +575,36 @@ const PlasmicDescendants = {
   root: [
     "root",
     "h2",
-    "form",
+    "newsletterForm",
+    "id",
     "numberInput",
+    "createdAt",
     "input",
     "freeBox",
+    "newsletterEmail",
     "input2",
     "button",
     "text"
   ],
   h2: ["h2"],
-  form: ["form", "numberInput", "input", "freeBox", "input2", "button", "text"],
+  newsletterForm: [
+    "newsletterForm",
+    "id",
+    "numberInput",
+    "createdAt",
+    "input",
+    "freeBox",
+    "newsletterEmail",
+    "input2",
+    "button",
+    "text"
+  ],
+  id: ["id", "numberInput"],
   numberInput: ["numberInput"],
+  createdAt: ["createdAt", "input"],
   input: ["input"],
-  freeBox: ["freeBox", "input2", "button", "text"],
+  freeBox: ["freeBox", "newsletterEmail", "input2", "button", "text"],
+  newsletterEmail: ["newsletterEmail", "input2"],
   input2: ["input2"],
   button: ["button", "text"],
   text: ["text"]
@@ -517,10 +615,13 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   h2: "h2";
-  form: typeof FormWrapper;
+  newsletterForm: typeof FormWrapper;
+  id: typeof FormItemWrapper;
   numberInput: typeof AntdInputNumber;
+  createdAt: typeof FormItemWrapper;
   input: typeof AntdInput;
   freeBox: "div";
+  newsletterEmail: typeof FormItemWrapper;
   input2: typeof AntdInput;
   button: typeof AntdButton;
   text: "div";
@@ -587,10 +688,13 @@ export const PlasmicNewsletterComponent = Object.assign(
   {
     // Helper components rendering sub-elements
     h2: makeNodeComponent("h2"),
-    form: makeNodeComponent("form"),
+    newsletterForm: makeNodeComponent("newsletterForm"),
+    id: makeNodeComponent("id"),
     numberInput: makeNodeComponent("numberInput"),
+    createdAt: makeNodeComponent("createdAt"),
     input: makeNodeComponent("input"),
     freeBox: makeNodeComponent("freeBox"),
+    newsletterEmail: makeNodeComponent("newsletterEmail"),
     input2: makeNodeComponent("input2"),
     button: makeNodeComponent("button"),
     text: makeNodeComponent("text"),

@@ -875,6 +875,19 @@
           "cssFilePath": "plasmic/halcyon_website/PlasmicHalcyonLinkContainer.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "DGQUyhUXa44C",
+          "name": "PrivatesForm2",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicPrivatesForm2.tsx",
+          "importSpec": {
+            "modulePath": "PrivatesForm2.tsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicPrivatesForm2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
