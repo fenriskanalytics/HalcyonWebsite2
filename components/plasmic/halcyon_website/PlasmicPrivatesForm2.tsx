@@ -75,6 +75,8 @@ import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect";
 import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 
+import { useScreenVariants as useScreenVariantsqAyk5ZgNfB } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: q_ayk5ZGNfB_/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -261,6 +263,10 @@ function PlasmicPrivatesForm2__RenderFunc(props: {
   });
   const dataSourcesCtx = usePlasmicDataSourceContext();
   const plasmicInvalidate = usePlasmicInvalidate();
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsqAyk5ZgNfB()
+  });
 
   return (
     <div
@@ -759,7 +765,9 @@ function PlasmicPrivatesForm2__RenderFunc(props: {
                       sty.numberGuestsText
                     )}
                   >
-                    {"Number of Guests"}
+                    {hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "Number of People"
+                      : "Number of Guests"}
                   </div>
                 }
                 name={"number_guests"}

@@ -121,9 +121,20 @@
   padding-left: 9px;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .interestedIn:global(.__wab_instance) {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
 .interestedInText {
   color: var(--token-7HpDdqXawcwS);
   font-family: "Playfair Display", serif;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .interestedInText {
+    font-size: 14px;
+  }
 }
 .interestedInSelect:global(.__wab_instance) {
   background: var(--token-Gsg_nXB6YK5A);
@@ -147,6 +158,11 @@
 .numberGuestsText {
   color: var(--token-7HpDdqXawcwS);
   font-family: "Playfair Display", serif;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .numberGuestsText {
+    font-size: 14px;
+  }
 }
 .guestsNumberInput:global(.__wab_instance) {
   background: var(--token-Gsg_nXB6YK5A);
